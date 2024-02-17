@@ -1,3 +1,15 @@
+# Environment
+PyWS
+
+# Data
+data
+
+# Trained Model
+experiments/trained_model/*.bin
+
+# other outputs
+outputs
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
