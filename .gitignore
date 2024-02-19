@@ -4,6 +4,9 @@ PyWS
 # Data
 data
 
+# macOS
+.DS_Store
+
 # Trained Model
 experiments/trained_model/*.bin
 
