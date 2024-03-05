@@ -2,7 +2,7 @@
 PyWS
 
 # Data
-data
+inputs
 
 # Trained Model
 experiments/trained_model/*.bin
