@@ -7,11 +7,15 @@ from nltk.tokenize import word_tokenize
 from Levenshtein import ratio, distance
 from itertools import product
 
-AngTextPath = '../data/AngOrdtext'
+"""AngTextPath = '../data/AngOrdtext'
 AngDatePath = '../data/AngOrddate'
-AngIDPath = '../data/AngOrdID'
 EngTextPath = '../data/EngOrdtext'
-EngDatePath = '../data/EngOrddate'
+EngDatePath = '../data/EngOrddate'"""
+
+AngTextPath = 'data\AngOrdtext'
+AngDatePath = 'data\AngOrddate'
+EngTextPath = 'data\EngOrdtext'
+EngDatePath = 'data\EngOrddate'
 
 def read_text_data(filepath):    
     sentences = []
@@ -35,13 +39,13 @@ def get_word_count(sentences):
     distinct_word_count = len(set(all_words))
     return all_words, word_count, distinct_word_count
 
-def get_distinct_word(df):
+def get_word(df):
     all_word = []
     for text in df['Text']:
         tokens = text.split()
         all_word.extend(tokens)
     distinct_word = set(all_word)
-    return distinct_word
+    return all_word, distinct_word
 
 def get_rank_frequency(all_words):
     word_frequency = {}
@@ -80,22 +84,28 @@ if __name__ == "__main__":
     EngText = read_text_data(EngTextPath)
     EngDate = read_data(EngDatePath)
     
-    # get word count
-    AngText_all_words, AngText_word_count, AngText_distinct_word_count = get_word_count(AngText)
-    EngText_all_words, EngText_word_count, EngText_distinct_word_count = get_word_count(EngText)
-    
-    # get rank frequency
-    AngText_word_frequency = get_rank_frequency(AngText_all_words)
-    EngText_word_frequency = get_rank_frequency(EngText_all_words)
-    
-    # get similarity scores
-    AngText_similarity = token_edit_levenstein_similarity_normalized(AngText_all_words)
-    EngText_similarity = token_edit_levenstein_similarity_normalized(EngText_all_words)
-    ang_text = read_text_data(AngTextPath)
-    ang_date = read_data(AngDatePath)
-    ang_id = read_data(AngIDPath)
-    ang_df = pd.DataFrame({'Text': ang_text,
-                            'Date': ang_date,})
-    ang_df['Text'] = ang_df['Text'].apply(lambda x: ' '.join(x))
-    ang_df['WordCount'] = ang_df['Text'].apply(lambda x: len(x.split()))
+    # get data frame
+    ang_df = pd.DataFrame({'Text': AngText, 'Date': AngDate})
+    eng_df = pd.DataFrame({'Text': EngText, 'Date': EngDate})
+
     ang_df['Date'] = ang_df['Date'].astype(int)
+    eng_df['Date'] = eng_df['Date'].astype(int)
+    ang_df['Text'] = ang_df['Text'].astype(str)
+    eng_df['Text'] = eng_df['Text'].astype(str)
+
+    print(ang_df.head())
+    print(ang_df.info())
+    print(eng_df.head())
+    print(eng_df.info())
+
+    # filter for specific time periods
+    ang_spe_df = ang_df[(ang_df['Date'] >= 900) & (ang_df['Date'] <= 1066)]
+    eng_spe_df = eng_df[(eng_df['Date'] >= 1067) & (eng_df['Date'] <= 1198)]
+
+    ang_spe_all_words, ang_spe_words_set = get_word(ang_spe_df)
+    eng_spe_all_words, eng_spe_words_set = get_word(eng_spe_df)
+
+    print('Anglo-Saxon English: ', len(ang_spe_all_words))
+    print('Middle English: ', len(eng_spe_all_words))
+    print('Anglo-Saxon English: ', len(ang_spe_words_set))
+    print('Middle English: ', len(eng_spe_words_set))
