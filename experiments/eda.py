@@ -80,6 +80,8 @@ def similarity_report(distinct_word_list, threshold=0.85, desc='Calculating simi
                 dfs.append(df)
         pbar.update(1)
     pbar.close()
+    if len(dfs) == 0:
+        return pd.DataFrame()
     df = pd.concat(dfs, ignore_index=True)
     return df
 
@@ -88,6 +90,8 @@ def similarity_summary(df, desc = 'Grouping similar words'):
     takes a dataframe with word1 and word2 that are similar,
     returns a dataframe with groups of similar words
     '''
+    if df.empty:
+        return pd.DataFrame()
     groups = []
     explored = set()
     pbar = tqdm(total=len(df['Word1']), desc=desc)
@@ -110,7 +114,10 @@ def word_to_similar_group(word_list, threshold=0.85, desc='Grouping similar word
     summary_test = similarity_summary(df_test, desc=desc + ' summary')
     summary_test.to_csv(path, sep='\t', index=False)
 
-if __name__ == "__main__":
+def main_part_1():
+    '''
+    Generate txt file for word similarity report in 0.85 generation threshold
+    '''
     # read data
     AngText = read_text_data(AngTextPath)
     AngDate = read_data(AngDatePath)
@@ -137,22 +144,30 @@ if __name__ == "__main__":
     ang_spec_all_words, ang_spec_words_set = get_word(ang_spe_df)
     eng_spec_all_words, eng_spec_words_set = get_word(eng_spe_df)
     all_words_set = ang_spec_words_set.union(eng_spec_words_set)
+    intersection_words_set = ang_spec_words_set.intersection(eng_spec_words_set)
     
     ang_spe_words_list = list(ang_spec_words_set)
     eng_spe_words_list = list(eng_spec_words_set)
     all_words_list = list(all_words_set)
+    intersection_words_list = list(intersection_words_set)
+    
+    df_test = similarity_report(ang_spe_words_list, threshold=0.85, desc='Grouping similar words in all texts report').sort_values(by='Similarity', ascending=False)
+    df_test.to_csv('experiments/exp_result/anglo_saxon_similarity_report_0.85.txt', sep='\t', index=False)
+    df_test = similarity_report(eng_spe_words_list, threshold=0.85, desc='Grouping similar words in all texts report').sort_values(by='Similarity', ascending=False)
+    df_test.to_csv('experiments/exp_result/middle_english_similarity_report_0.85.txt', sep='\t', index=False)
+    df_test = similarity_report(all_words_list, threshold=0.85, desc='Grouping similar words in all texts report').sort_values(by='Similarity', ascending=False)
+    df_test.to_csv('experiments/exp_result/all_texts_similarity_report_0.85.txt', sep='\t', index=False)
+    df_test = similarity_report(intersection_words_list, threshold=0.8, desc='Grouping similar words in intersection texts report').sort_values(by='Similarity', ascending=False)
+    df_test.to_csv('experiments/exp_result/intersection_texts_similarity_report_0.8.txt', sep='\t', index=False)
 
-    word_to_similar_group(ang_spe_words_list, 
-                          threshold=0.9,
-                          desc='Grouping similar words in anglo-saxon', 
-                          path='experiments/exp_result/anglo_saxon_similarity_summary.txt')
-    
-    word_to_similar_group(eng_spe_words_list,
-                          threshold=0.9,
-                          desc='Grouping similar words in middle english', 
-                          path='experiments/exp_result/middle_english_similarity_summary.txt')
-    
-    word_to_similar_group(all_words_list,
-                          threshold=0.9,
-                          desc='Grouping similar words in all texts',
-                            path='experiments/exp_result/all_texts_similarity_summary.txt')
+def main_part_2():
+    summary_threshold = 0.85
+    df_similar = pd.read_csv('experiments/exp_result/intersection_texts_similarity_report_0.85.txt', sep='\t')
+    df_similar = df_similar[df_similar['Similarity'] > summary_threshold]
+    df_summary = similarity_summary(df_similar)
+    df_summary.to_csv('experiments/exp_result/intersection_texts_similarity_summary_{}.txt'.format(summary_threshold), sep='\t', index=False)
+
+
+if __name__ == "__main__":
+    main_part_2()
+

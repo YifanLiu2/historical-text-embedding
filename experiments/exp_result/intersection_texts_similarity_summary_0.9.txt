@@ -1,0 +1,207 @@
+Group	Words
+1	contemplationi contemplationis contemplatione
+2	sanctimonalium sanctimonialium
+3	consentientibus consencientibus
+4	distributione distributionem
+5	confirmationi confirmationis confirmatione
+6	sanctimonialis sanctimoniali
+7	congregationi congregationis congregatione
+8	perturbatione perturbationem
+9	confirmationem confirmatione
+10	constructionem constructione
+11	restaurationem restauratione
+12	recuperationem recuperatione
+13	constitutionis constitutioni
+14	satisfactionem satisfactione
+15	subscriptionem subscriptione
+16	supranominata supranominato
+17	presumpserit presumpserint presumserit
+18	consuetudine consuetudines consuetudinem
+19	beniuolentia beniuolentiam
+20	dorobernensis dorobernensi
+21	benedictione benedictionem
+22	construxerat construxerant
+23	incolumitatem incolumitate
+24	prosperitatem prosperitate
+25	consuetudinum consuetudinem
+26	recordatione recordationem
+27	herfordensis herefordensis
+28	restitutionem restitutione
+29	glestoniensis glastoniensis
+30	consuetudinis consuetudines
+31	satisfecerint satisfecerit
+32	institutiones institutionem institutione
+33	misericordia misericordiam misericordie
+34	metropolitani metropolitano metropolitana metropolitane
+35	incarnatione incarnationem incarnations
+36	herefordscire hertfordscire
+37	dispositionem dispositione
+38	incarnationis incarnations
+39	deprecationem deprecatione
+40	consanguineus consanguineis
+41	constituantur constituatur
+42	consentiente consentientes consenciente
+43	presumptionem presumptione
+44	indignationem indignatione
+45	herefordensi herefordensis
+46	quibuscunque quibuscumque
+47	expeditionem expeditionum expeditione expeditiones
+48	emendatione emendationem emendationes
+49	aduocatione aduocationem
+50	omnipotenti omnipotentis omnipotentia omnipotente
+51	hereditaria hereditariam hereditarii hereditarie hereditario
+52	stabilitatem stabilitate
+53	munificencie munificentie
+54	auctoritate auctoritatem autoritate
+55	rationabili rationabilis
+56	integritatem integritate
+57	damnationis dampnationis
+58	dedicationis dedicationes
+59	prenominatus prenominatum
+60	suprascripta suprascripte suprascripti suprascripto
+61	confirmanda confirmandam confirmando
+62	subiectionem subiectione
+63	porciunculam portiunculam
+64	inuiolabile inuiolabilem inuiolabili
+65	diligentius diligentibus
+66	satisfaciant satisfaciat
+67	conuentionem contentionem conuentione
+68	posteritati posteritatis
+69	pontificali pontificalis
+70	confirmandum confirmandam
+71	redintegrari redintegrare
+72	pertinenciis pertinentiis
+73	construendum construendam
+74	ordinationem ordinatione
+75	londoniensis lundoniensis londiniensis
+76	condempnatus condempnamus
+77	indulgenciam indulgentiam
+78	prouidentia prouidentiam
+79	quadragesimo quadragesima
+80	expeditionis expeditiones
+81	wintoniensis wintoniensi
+82	emendauerint emendauerit
+83	hereditarium hereditariam
+84	interdiximus interdicimus
+85	prenominata prenominatam prenominati prenominato prenominate
+86	quamplurimis quamplurimi
+87	rectitudinem rectitudine rectitudines
+88	indulgentia indulgentiam
+89	inuiolabilis inuiolabili
+90	confirmantes confirmante
+91	contentione contentionem conuentione
+92	conscientiam conscientia
+93	multitudine multitudinem multitudini
+94	consiliariis consiliarii
+95	dominationi dominationis dominatione
+96	redemptione redemptionem
+97	festiuitatem festiuitate
+98	ceterarumque ceterorumque
+99	lundoniensi lundoniensis
+100	munificentia munificentie
+101	wigorniensis wigornensis
+102	difinitionem definitionem
+103	generationes generatione
+104	posteritates posteritatis
+105	orationibus rationibus
+106	uniuersalis uniuersali
+107	intentionem intentione
+108	confirmant confirmante
+109	prebentibus presentibus
+110	confirmare confirmarem
+111	principali principalis
+112	presbitero presbiteros
+113	cuiuscunque cuiuscumque
+114	episcopatu episcopatus episcopatum episcopatui
+115	principalem principales
+116	uicecomitum uicecomitem
+117	supradicti supradictis
+118	apostolica apostolicam
+119	constituti constitutis
+120	quarentenas quarentenis
+121	latrocinium patrocinium
+122	congregatis congregati
+123	benignitati benignitate
+124	felicitate felicitatem
+125	hereditatem hereditate
+126	eboracensi eboracensis
+127	quorumlibet quarumlibet
+128	pertinente pertinentes pertinentem
+129	piscationes piscationem
+130	apostolicum apostolicam
+131	obedienciam obedientiam obediencia
+132	inperpetuum imperpetuum
+133	consecratus consecratum
+134	reuerenciam reuerentiam
+135	confirmatam confirmata confirmatum
+136	prescriptam prescripta prescriptum
+137	sempiternam sempiternum sempiterna
+138	interposito interposita
+139	consecrauit consecraui
+140	constructum constructam
+141	presbiteri presbiteris
+142	suggestione suggestioni
+143	priuilegii priuilegiis
+144	confirmatio confirmatis confirmato
+145	representat representet
+146	apostolicis apostolici
+147	uenerabilis uenerabili
+148	seruauerint seruauerit
+149	resipiscat resipiscant
+150	pertinentia pertinencia
+151	sacerdotale sacerdotali
+152	supradictas supradictam supradicta supradictis supradictos supradictus
+153	temeritatem temeritate
+154	perseuerent perseueret
+155	disciplinam disciplina
+156	adstantibus astantibus
+157	conscriptam conscripta
+158	impedimento inpedimento
+159	decreuerunt decreuerint
+160	constitutum constitutus
+161	huntendonie huntendone
+162	predictarum predictorum
+163	confirmetis confirmatis
+164	soliditate soliditatem
+165	natiuitate natiuitatem
+166	reuerentia reuerentiam
+167	penitentiam penitentia
+168	diligentiam diligentia
+169	supradicto supradictos
+170	testimonii testimoniis
+171	walsingeham walsingham
+172	obedientia obedientiam
+173	fidelitate fidelitatem
+174	resipuerint resipuerit
+175	securitatem securitate
+176	altitudinem altitudine
+177	continentur continetur
+178	prenominaui prenominati
+179	subscriptas subscriptis subscripta
+180	monasterii monasteriis
+181	imperpetuam imperpetuum
+182	dilectionem dilectione
+183	traditione traditionem
+184	prescripti prescriptis
+185	decreuerit decreuerint
+186	latitudinem latitudine
+187	operatione operationem
+188	redemptori redemptoris
+189	iniquitates iniquitatis iniquitatem
+190	tempestatis tempestates
+191	reseruetur reseruentur
+192	substanciis substantiis
+193	pentecostes pentecosten
+194	quantitatem quantitate
+195	demonstrari demonstrare
+196	supradictum supradictam supradictus
+197	confirmatus confirmatum confirmatis confirmamus
+198	constituat constituant
+199	tempestate tempestates
+200	consecrata consecratam
+201	eleemosinam elemosinam
+202	aduersariis aduersarios
+203	stapelforda stapelford
+204	episcopali episcopalis
+205	ueneratione generatione
+206	constructa constructam

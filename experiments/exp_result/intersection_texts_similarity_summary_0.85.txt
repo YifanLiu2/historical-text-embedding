@@ -1,0 +1,1332 @@
+Group	Words
+1	contemplationi contemplationis contemplatione
+2	sanctimonalium sanctimonialium
+3	consentientibus consencientibus
+4	distributione distributionem distributionis
+5	confirmationi confirmationis confirmatione confirmationem
+6	sanctimonialis sanctimoniali sanctimonialibus sanctimonialium
+7	congregationi congregationis congregatione
+8	perturbatione perturbationem
+9	constructionem constructione
+10	restaurationem restauratione
+11	recuperationem recuperatione
+12	constitutionis constitutioni
+13	satisfactionem satisfactione satisfactionis
+14	subscriptionem subscriptione
+15	supranominata supranominato supranominatis
+16	presumpserit presumpserint presumserit
+17	consuetudine consuetudines consuetudinem
+18	beniuolentia beniuolentiam
+19	dorobernensis dorobernensi
+20	benedictione benedictionem
+21	construxerat construxerant
+22	incolumitatem incolumitate
+23	prosperitatem prosperitate
+24	consuetudinum consuetudinem
+25	recordatione recordationem
+26	herfordensis herefordensis
+27	restitutionem restitutione
+28	glestoniensis glastoniensis
+29	consuetudinis consuetudines consuetudinibus
+30	satisfecerint satisfecerit
+31	institutiones institutionem institutione
+32	misericordia misericordiam misericordie
+33	metropolitani metropolitano metropolitana metropolitane metropolitanus
+34	incarnatione incarnationem incarnations
+35	herefordscire hertfordscire
+36	dispositionem dispositione
+37	incarnationis incarnations
+38	deprecationem deprecatione
+39	consanguineus consanguineis
+40	constituantur constituatur
+41	consentiente consentientes consenciente
+42	presumptionem presumptione
+43	indignationem indignatione
+44	herefordensi herefordensis
+45	quibuscunque quibuscumque
+46	expeditionem expeditionum expeditione expeditiones
+47	emendatione emendationem emendationes
+48	aduocatione aduocationem
+49	omnipotenti omnipotentis omnipotentia omnipotente
+50	hereditaria hereditariam hereditarii hereditarie hereditario
+51	stabilitatem stabilitate
+52	munificencie munificentie
+53	auctoritate auctoritatem autoritate
+54	rationabili rationabilis
+55	integritatem integritate
+56	damnationis dampnationis
+57	dedicationis dedicationes
+58	prenominatus prenominatum
+59	suprascripta suprascripte suprascripti suprascripto
+60	confirmanda confirmandam confirmando
+61	subiectionem subiectione
+62	porciunculam portiunculam
+63	inuiolabile inuiolabilem inuiolabili
+64	diligentius diligentibus
+65	satisfaciant satisfaciat
+66	conuentionem contentionem conuentione
+67	posteritati posteritatis
+68	pontificali pontificalis
+69	confirmandum confirmandam
+70	redintegrari redintegrare
+71	pertinenciis pertinentiis
+72	construendum construendam
+73	ordinationem ordinatione
+74	londoniensis lundoniensis londiniensis
+75	condempnatus condempnamus
+76	indulgenciam indulgentiam
+77	prouidentia prouidentiam
+78	quadragesimo quadragesima
+79	expeditionis expeditiones
+80	wintoniensis wintoniensi
+81	emendauerint emendauerit
+82	hereditarium hereditariam
+83	interdiximus interdicimus
+84	prenominata prenominatam prenominati prenominato prenominate
+85	quamplurimis quamplurimi
+86	rectitudinem rectitudine rectitudines
+87	indulgentia indulgentiam
+88	inuiolabilis inuiolabili
+89	confirmantes confirmante
+90	contentione contentionem conuentione
+91	conscientiam conscientia
+92	multitudine multitudinem multitudini
+93	consiliariis consiliarii
+94	dominationi dominationis dominatione
+95	redemptione redemptionem
+96	festiuitatem festiuitate
+97	ceterarumque ceterorumque
+98	lundoniensi lundoniensis
+99	munificentia munificentie
+100	wigorniensis wigornensis
+101	difinitionem definitionem
+102	generationes generatione
+103	posteritates posteritatis
+104	orationibus rationibus
+105	uniuersalis uniuersali
+106	intentionem intentione
+107	confirmant confirmante confirmat
+108	prebentibus presentibus
+109	confirmare confirmarem confirmari
+110	principali principalis
+111	presbitero presbiteros presbiteri presbiter
+112	cuiuscunque cuiuscumque
+113	episcopatu episcopatus episcopatum episcopatui
+114	principalem principales
+115	uicecomitum uicecomitem
+116	supradicti supradictis supradicte supradicta supradicto
+117	apostolica apostolicam apostolico apostolici apostolice
+118	constituti constitutis constitui constituta constituto
+119	quarentenas quarentenis
+120	latrocinium patrocinium
+121	congregatis congregati
+122	benignitati benignitate
+123	felicitate felicitatem
+124	hereditatem hereditate
+125	eboracensi eboracensis
+126	quorumlibet quarumlibet
+127	pertinente pertinentes pertinentem pertinent
+128	piscationes piscationem
+129	apostolicum apostolicam
+130	obedienciam obedientiam obediencia
+131	inperpetuum imperpetuum
+132	consecratus consecratum
+133	reuerenciam reuerentiam
+134	confirmatam confirmata confirmatum
+135	prescriptam prescripta prescriptum
+136	sempiternam sempiternum sempiterna
+137	interposito interposita
+138	consecrauit consecraui
+139	constructum constructam
+140	suggestione suggestioni
+141	priuilegii priuilegiis priuilegio priuilegia
+142	confirmatio confirmatis confirmato
+143	representat representet
+144	apostolicis apostolici
+145	uenerabilis uenerabili
+146	seruauerint seruauerit
+147	resipiscat resipiscant
+148	pertinentia pertinencia
+149	presbiteris presbiteri presbiteros
+150	sacerdotale sacerdotali
+151	supradictas supradictam supradicta supradictis supradictos supradictus
+152	temeritatem temeritate
+153	perseuerent perseueret
+154	disciplinam disciplina
+155	adstantibus astantibus
+156	conscriptam conscripta
+157	impedimento inpedimento
+158	decreuerunt decreuerint
+159	constitutum constitutus
+160	huntendonie huntendone
+161	predictarum predictorum
+162	confirmetis confirmatis
+163	soliditate soliditatem
+164	natiuitate natiuitatem
+165	reuerentia reuerentiam
+166	penitentiam penitentia
+167	diligentiam diligentia
+168	testimonii testimoniis testimonio
+169	walsingeham walsingham
+170	obedientia obedientiam obedientie obediencia
+171	fidelitate fidelitatem
+172	resipuerint resipuerit
+173	securitatem securitate
+174	altitudinem altitudine
+175	continentur continetur
+176	prenominaui prenominati
+177	subscriptas subscriptis subscripta
+178	monasterii monasteriis monasterio monasteria
+179	imperpetuam imperpetuum
+180	dilectionem dilectione
+181	traditione traditionem
+182	prescripti prescriptis prescripte prescripto prescripta
+183	decreuerit decreuerint
+184	latitudinem latitudine
+185	operatione operationem
+186	redemptori redemptoris redemptor
+187	iniquitates iniquitatis iniquitatem
+188	tempestatis tempestates
+189	reseruetur reseruentur
+190	substanciis substantiis
+191	pentecostes pentecosten
+192	quantitatem quantitate
+193	demonstrari demonstrare
+194	supradictum supradictam supradictus
+195	confirmatus confirmatum confirmatis confirmamus
+196	constituat constituant constituit
+197	tempestate tempestates
+198	consecrata consecratam consecrate
+199	eleemosinam elemosinam
+200	aduersariis aduersarios
+201	stapelforda stapelford
+202	episcopali episcopalis
+203	ueneratione generatione
+204	constructa constructam
+205	concedenda concedendo
+206	saluatori saluatoris saluatore
+207	substancia substantia
+208	superiori superioris superiore
+209	extiterat extiterant extiterit
+210	scriptura scripturam scripture
+211	residentes residente
+212	patrimonio matrimonio patrimonia patrimonii
+213	petitione petitionem
+214	laudabile laudabilem laudabili
+215	sapientum sapientium
+216	contulerat contulerit
+217	potestate potestatem potestates
+218	quascumque quacumque quoscumque
+219	inferiorem inferiore
+220	dignitates dignitatis dignitate dignitatem
+221	presentia presentiam presenti presentis presentie presencia
+222	facultatis facultates
+223	defenderet defendere
+224	condonaui condonauit
+225	libertates libertatis libertate libertatem
+226	potentibus petentibus patentibus
+227	largifluam largiflua
+228	pertinebat pertineat
+229	particula particulam particulas
+230	nominatur nominantur nominatum dominatur
+231	custodiant custodiunt custodiat
+232	construxi construxit construi
+233	temporalia temporali temporalis
+234	comitatum comitatuum comitatus comitatu
+235	benedictus benedictum
+236	testamenti testamento
+237	dignitati dignitatis dignitate
+238	trinitatem trinitate
+239	plurimarum plurimorum
+240	perturbare perturbari
+241	calumpniam calumniam calumpnia
+242	utilitatem utilitate
+243	corporalis corporali
+244	confirmaui confirmari
+245	studuerint studuerit
+246	computetur computatur comutetur
+247	terminatum terminatam terminatur
+248	genetricis genitricis gentricis
+249	persoluant persoluat
+250	contrario econtrario
+251	benedictio benedicto benedicti
+252	exactione exactiones exactioni
+253	intemerato intemerata intemerate
+254	concedere concederem
+255	adiacente adiacentes adiacentem adiacenti adiacent
+256	institutus institutis
+257	sanctione sanctionem
+258	diuisionem diuisiones
+259	conscripti conscripta conscripsi
+260	requirere requireret
+261	suscipiant suscipiat
+262	sacerdotis sacerdoti
+263	orientalis orientali
+264	quecunque quemcunque quecumque quocunque quicunque quacunque
+265	pastorali pastoralis
+266	prepositum propositum prepositus
+267	conflictus conflictu
+268	instantius instantis
+269	elemosinis elemosinas
+270	societate societatem
+271	clementia clementiam clementi clementie
+272	concordiam concordia
+273	penitentie penitentia
+274	recepturus recepturum
+275	obliuioni obliuionis obliuione
+276	genitrici genitricis
+277	religionis religiosis
+278	permanent permanente permaneant permaneat permanet permanens
+279	maledictio maledicti
+280	electionem electione
+281	quemcumque quemcunque quecumque
+282	existentem existentes
+283	oblatione oblationem oblationes
+284	deuotionem deuotione
+285	maiestatis magestatis
+286	presentium presentiam
+287	religiosi religiosis religiose religiosa religioso
+288	permaneret permanere
+289	munimentis monimentis
+290	reuocentur reuocetur
+291	instanciam instantiam
+292	ceterisue ceterisque
+293	examinatio examinatis
+294	extiterint extiterant extiterunt extiterit
+295	deducantur reducantur
+296	preposito prepositos prepositi proposito
+297	pontificis pontifices pontifici
+298	specialius specialis
+299	sacramenta sacramento
+300	potestatis potestates
+301	kingestone kingestune kingeston
+302	prenotatum prenotatam
+303	huntendune huntendone
+304	desideriis desiderii
+305	pontifice pontifices pontifici
+306	bradeford bradeforda
+307	inuiolatum inuiolatam
+308	donationem donationes donatione
+309	beneficii beneficiis beneficia
+310	inuiolata inuiolatam
+311	iudiciarie iudiciaria
+312	penitencia penitentia
+313	patrocinio patrocinia
+314	uoluntati uoluntatis uoluntate
+315	prioribus primoribus
+316	qualitate qualitatem
+317	parentibus patentibus
+318	adquisiuit adquisiui acquisiuit
+319	uetustate uetustatem
+320	baldwinus baldewinus
+321	interdico interdicto
+322	habeatque habeantque
+323	laudabilis laudabili
+324	imposterum inposterum
+325	prefatorum prelatorum prefatarum
+326	religione religionem religiose
+327	religiosam religiosa
+328	frequentes frequenter
+329	temporalem temporale
+330	seruituti seruitutis seruitute
+331	libertatum libertatem
+332	diligenti diligentia
+333	infangene infangenes
+334	orientale orientalem orientali
+335	contigeret contigerit
+336	inuasione inuasionem
+337	instinctu instinctus
+338	sententiam sententia
+339	degentibus legentibus
+340	kingestun kingestune kingeston
+341	facultatem facultates
+342	exequendi exequendis exequenda
+343	precedente precedenti
+344	iherusalem ierusalem
+345	instantia instantiam instantis
+346	brancestr brancestre
+347	conspectu conspectum
+348	optulerunt obtulerunt
+349	utilitati utilitatis utilitate
+350	presidente residente
+351	adquisitas adquisitam adquisita
+352	quodcunque quocunque quodcumque
+353	quocumque quoscumque quodcumque quecumque quicumque quocunque quorumque quacumque
+354	perueniant perueniat
+355	trinitati trinitatis trinitate
+356	exstiterit extiterit
+357	discipline disciplina
+358	procinctu procinctum
+359	aquilonari aquilonali
+360	firmitatem firmitate
+361	obliuionem obliuione
+362	institutio institutis
+363	transactis transacti
+364	uoluntatem uoluntate
+365	obediencie obediencia obedientie
+366	quamcunque quemcunque quacunque
+367	constituo constituto constitui
+368	libertati libertatis libertate
+369	interdicta interdicto
+370	dignitatum dignitatem
+371	seruitutem seruitute
+372	prenotata prenotatam
+373	prepositis prepositos prepositi prepositus
+374	donationi donationis donatione
+375	exactionis exactioni exactiones
+376	famulatum famulatui
+377	eadwardum eadwardus edwardum
+378	perpetuas perpetuam perpetua perpetuis
+379	edmundum eadmundum edmundus
+380	uniuersus uniuersum uniuersas uniuersis uniuersos
+381	sepultura sepulture
+382	ubicunque ubicumque
+383	ministris ministros ministri sinistris
+384	doctrina doctrinam
+385	proueniat prouenit
+386	midelton mideltone
+387	meorumque eorumque
+388	subiecti subiectis subiecta
+389	deleantur deleatur
+390	sacerdote sacerdoti
+391	subueniat subuenit
+392	lundonia lundoniam lundonie londonia
+393	exercitus exercitu
+394	uniuersi uniuersis uniuersa uniuerse
+395	consistat consistit
+396	uindictam uindicta
+397	dominicam dominica dominicas dominicum
+398	facientes faciente
+399	gloriosum gloriosus
+400	miseriis misteriis
+401	seruiciis seruitiis
+402	subiacent subiacet subiaceat
+403	mansionis mansiones
+404	tradendum tradendam
+405	ministro ministros ministre ministri
+406	uersutia uersutias
+407	hereford hereforda hertford
+408	procurari procuraui
+409	exerceat exerceant
+410	instanter instante
+411	nominata nominatas nominatam nominato nominati
+412	sancteque sanctoque sanctique
+413	canonica canonicam canonice canonici
+414	acquisita adquisita
+415	principio principi principis
+416	districte districti districto districta
+417	impendere inpendere
+418	sacrilega sacrilego
+419	clementer clementem
+420	uideantur uideatur uidentur
+421	emendando emendanda
+422	roluestun rolueston
+423	rodbertus rotbertus robertus
+424	principe principes principi
+425	precepti preceptis precepto precepi precepta
+426	orationes orationis oratione
+427	nostreque nostrique nostraque
+428	cimiteria cimiterio
+429	conuentio contentio consentio
+430	scribatur scribitur
+431	quemlibet quelibet quamlibet
+432	continet continent
+433	karitatis caritatis
+434	predictis predictos predicti predictus predictas
+435	conuentus conuentui contentus conuentu
+436	cuicumque quicumque cuicunque
+437	carucatam carucatas
+438	weardwite wardwite
+439	uoluerunt uoluerint
+440	sanguine sanguinem
+441	licenciam licencia licentiam
+442	secularem seculares
+443	uenerande ueneranda
+444	predicto predictos predicta predicte predicti
+445	prioratu prioratum
+446	potentiam potentia
+447	presente presentem presentes presentie presento presenti
+448	emptionis emptiones
+449	profectu profectum
+450	gaudenter gaudentes
+451	omnimoda omnimodam omnimodo
+452	impendant impendat
+453	tenentes tendentes tenentis tenente
+454	speciali specialis
+455	habeatur habeantur habetur habentur
+456	desistere resistere
+457	restituit restitui
+458	inferiori interiori inferiore
+459	concordie concordia
+460	mideltune mideltone
+461	composuit conposuit composui
+462	cantuarii cantuarie
+463	reliquias reliquiis reliquis
+464	subiectus subiectis
+465	tresdecim tredecim
+466	consensu consensum consensus concensu consensi
+467	existere existerem existeret
+468	manifesta manifesto manifeste
+469	blodwite blodewite
+470	secularis secularia seculares seculari
+471	portionem portiones portione
+472	respectus respectu
+473	quoslibet quolibet quodlibet
+474	potuerint potuerit potuerunt
+475	seruitii seruitiis seruitio seruitia
+476	roboratur roboratus roboratum
+477	dampnatus dampnamus damnatus
+478	seruantur seruatur
+479	homnibus hominibus omnibus
+480	lincolnia lincolia
+481	condigna condignam condigne
+482	agelricus egelricus
+483	apostolum apostolus
+484	puniendus puniendum
+485	uentilata uentilate
+486	canonicis canonicos canonici
+487	cautionem cautione
+488	nominatim nominatum nominatam nominati
+489	ciuitatem ciuitate
+490	extraneis extraneus extranei
+491	habuerunt habuerint
+492	episcopos episcopo episcopis episcopus
+493	nominibus hominibus
+494	uidebitur uidebatur
+495	defuncti defunctis defuncto
+496	mansionem mansionum mansiones
+497	prouincie prouincia
+498	desistant desistat
+499	generalis generali
+500	uictoria uictoriam
+501	disposui disposuit
+502	recipiat recipiant
+503	aquilonem aquilone
+504	introitum introitus
+505	elegerit elegerint
+506	rationis orationis
+507	iusticia iusticiam iusticie iustitia
+508	custodite custodie custodit custodire
+509	stabilita stabilia
+510	episcopum episcopus
+511	qualiter equaliter
+512	antedicto antedicta
+513	benedicte benedicto benedicti
+514	spontanea spontanee
+515	glastonia glastonie
+516	eadmundus edmundus eadmundum
+517	sanctarum sanctorum
+518	temerario temeraria
+519	prouintia prouincia
+520	scewinge sceawinge
+521	foresteal forestal
+522	progenie progeniem
+523	lefwinus leofwinus lewinus lefwines
+524	mereatur mereantur
+525	iustitiam iusticiam iustitia
+526	mercantur mereantur
+527	quorumdam quorundam
+528	memoratum memoratus
+529	perpetuum perpetuam
+530	emptione emptiones
+531	sequentes sequenter sequentem
+532	legitimis legitimus
+533	defendat defendant
+534	obsequii obsequiis obsequio obsequia
+535	apostolis apostoli apostolus
+536	regularem regulares
+537	suscepti susceptis suscepi
+538	custodiam custodia custodiat
+539	preditus predictus
+540	nostrarum nostrorum
+541	uoluerit uoluerint noluerit uolueris
+542	adquirere acquirere
+543	propositi prepositi proposito
+544	honoribus honeribus
+545	desidero desiderio
+546	celebrare celebrari
+547	stanford stanforda stanforde staunford staford
+548	poterunt potuerunt poterant
+549	agnoscat agnoscant
+550	quidlibet quodlibet quilibet
+551	qualibet quamlibet quelibet quilibet quolibet
+552	mancipari mancipare
+553	transeant transeunt transeat
+554	edwardus eadwardus edwardum
+555	alienatum alienatus
+556	ueritatem ueritate
+557	inueniant inueniat
+558	dominium dominicum dominum
+559	remaneat remaneant
+560	consuluit consului
+561	ceterorum ceterarum
+562	basilica basilicam
+563	regulari regularis
+564	firmetur firmentur
+565	pristinis pristini
+566	licentia licentiam licencia
+567	dominici dominicis dominice dominico dominii dominica
+568	desideria desiderii desiderio
+569	roborauit roboraui
+570	sententie sententia
+571	diabolica diabolico
+572	oneribus honeribus operibus
+573	elegerunt elegerint
+574	habeamus habebamus habemus
+575	presumat presumant
+576	omnimodum omnimodam
+577	utriusque utrisque
+578	tenuerint tenuerant tenuerunt
+579	librorum liberorum librarum
+580	predictam predicta predictas predictum
+581	wlfstanus wlstanus
+582	augustini augustino
+583	pertinens pertinent
+584	episcopii episcopis episcopi
+585	caritate caritatem claritate karitate
+586	transitus transitum
+587	sentencia sententia
+588	wulfricus wlfricus
+589	consilium concilium
+590	duodecimo duodecim
+591	wulstanus wlstanus
+592	uniuersam uniuersa uniuersas uniuersum
+593	pertinet pertineat pertinent
+594	suorumque quorumque
+595	memoratis memoratus
+596	roboramus roboratus
+597	perdurent perduret
+598	londoniam lundoniam londonia
+599	habuerit habuerint
+600	confirmet confirmat
+601	posteris posteros posteri
+602	corpore corporee corpori corpora
+603	quatenus quatinus
+604	edmundo eadmundo edmund edmundi
+605	operatus operatur
+606	hucusque huiusque
+607	omniaque omnique
+608	ramesiam ramesia
+609	mortales mortalis
+610	iudicate iudicare
+611	dimidiam dimidia dimidium
+612	hamsokne hamsocne
+613	inimicis inimici inimicus inimicos
+614	walterum alterum walterus
+615	monialis moniali
+616	tradidit tradidi
+617	cognatis cognitis cognati cognatus
+618	cultoris cultores
+619	lapideam lapidea
+620	decursum decursus
+621	edwardo eadwardo edwardi
+622	eliensis eliensi
+623	antequam antiquam
+624	incultis indultis
+625	copiosam copiosa
+626	aduersis aduersus
+627	scripsit scripsi
+628	legitima legitime legitimo
+629	cornubie cornubia
+630	hamtone hamptone
+631	prefato prefatos prefata prelato prefate prefati
+632	rectoris rectores
+633	insidias insidiis
+634	prefecto prefecti
+635	mandati mandatis mandata mandaui
+636	spiritus spiritu
+637	degentes debentes
+638	quicquid quidquid
+639	dationem rationem datione
+640	gloriose gloriosi glorioso
+641	pecunias pecunia pecuniis pecuniam
+642	primates primatis
+643	dictione ditione
+644	ipsamque ipsaque
+645	oportet oporteat
+646	manente manentes manentem manent
+647	proprii propriis propria proprio proprie
+648	germanum germanus
+649	concedat concedit
+650	consultu consulta
+651	stabile stabiles stabilem stabili
+652	confinio confinia
+653	promisi promisit
+654	perticam pertica perticas
+655	prestita prestito
+656	seruiat seruiant
+657	neglecto neglecta
+658	uirginis uirgini
+659	minster minister
+660	diocesis diocesi diocesim
+661	pietatem pietate
+662	existunt existant
+663	radulfus raulfus
+664	clericus clericis clericos
+665	presules presule presulis
+666	mandauit mandaui
+667	parentes parentem
+668	oswaldus oswaldum
+669	hampton hamptone
+670	terminum terminus
+671	inimicum inimicus
+672	facturum acturum
+673	excipere excidere
+674	subditis subditus subditos subditi
+675	meliores melioris
+676	interius inferius
+677	decreui decreuit decreti
+678	retinuit detinuit
+679	maneriis manerii
+680	mercede mercedem
+681	sequetur sequitur seruetur
+682	sancitum sanctum
+683	uirtutum uirtutem
+684	oriente orientem
+685	deuenit deueniat euenit
+686	ulfcetel ulfketel
+687	norfolc nortfolc
+688	uobiscum nobiscum
+689	faciendi faciendo
+690	perduxi perduxit
+691	mulierem muliere mulierum
+692	absoluti absolui absoluta
+693	kalendas kalendis
+694	antiqua antiquam antiquas antique antiquo antiqui
+695	eadwardi edwardi eadwardo adwardi
+696	auaricie auaritie
+697	donariis denariis
+698	permisi permisit
+699	prefatis prefatas prefatus prefatos prefati
+700	pietatis pietati
+701	prefatam prefatum prefata prefatas
+702	censura censuram mensura
+703	boclande bocland boclanda boclonde
+704	negociis negotiis
+705	inuentum inuentus
+706	quousque quosque
+707	persona personam persone
+708	baratrum aratrum
+709	culturas cultura culturam
+710	singulis singulus singuli singulos
+711	sortitam sortita
+712	capituli capitulo
+713	cognitio cognitis
+714	dictorum dictarum
+715	concensi consensi concensu
+716	terminos termino terminus terminis
+717	memorata memorato
+718	sermonem sermone
+719	mensuram censuram mansuram mensura
+720	dederunt dederant
+721	utcumque utrumque
+722	dominio dominico domini domino dominii dominis
+723	ingelram ingeram
+724	ratione oratione rationem datione
+725	uestitus uestibus
+726	defectu defectum
+727	habendum habendam
+728	cartulam cartula
+729	dilecto dilectio dilecte dilecta dilecti
+730	congruam congrua congruum
+731	ponantur ponatur
+732	gratuita gratuito
+733	ianitore ianitor
+734	disponat disponit
+735	habetis habeatis habitis
+736	uocatur uocantur uocatus
+737	wlstanum wlstanus
+738	uolumus uoluimus nolumus
+739	decretis decreti
+740	duntaxat dumtaxat
+741	iunioris iuniori
+742	obtineat optineat obtinet
+743	optinuit obtinuit
+744	teloniis teloneis
+745	marisci mariscis marisco
+746	poterit potuerit poterat
+747	roborare roborari
+748	auunculi auunculo
+749	materiem materiam
+750	fecerit fecerint fecerat
+751	publicam publica
+752	imprimis inprimis
+753	antiquum antiquam antiquus
+754	noticiam notitiam
+755	pastores pastore pastorem
+756	memoriam memoria
+757	mercator mercatos mercato
+758	nouerit noluerit nouerint
+759	rectorem rectores
+760	stantune stantun
+761	portibus partibus
+762	stabilis stabiles stabili stabilia
+763	nunquam nuncquam numquam unquam
+764	ulterius alterius
+765	reliquie reliqui reliquis
+766	deuotus deuotius deuotum deuotis
+767	aldhelmi aldhelmo aldelmi
+768	ferdwite firdwite
+769	patiatur patitur paciatur
+770	contuli contulit
+771	restituo restitui
+772	uenerint uenerit
+773	istorum iustorum istarum
+774	fecerunt fecerint fecerant
+775	alienare alienari
+776	teneatur tenentur
+777	concilio concilii consilio
+778	facimus faciamus fecimus
+779	donante donantes donate donant
+780	mansura mansuram mensura
+781	uirgata uirgatam uirgatas
+782	euesham eouesham
+783	fabricam fabrica
+784	statutis statuti
+785	extremum extremam
+786	apostolo apostoli
+787	dunstan dunstano dunstani
+788	adierunt adierint
+789	scripti scriptis scripsi scripto scripta
+790	capitis capiatis
+791	deberet deberent debere
+792	eternis externis eterni ternis eternas
+793	ueridica ueredica
+794	licenter libenter
+795	omnesque omnemque
+796	aduersum aduersus
+797	aliorum aliorsum aliarum
+798	constat constant constet
+799	utrique utrisque utroque utraque utique
+800	testibus uestibus
+801	quemquam quamquam
+802	pristino pristini
+803	suscepit suscepi
+804	cautelam cautela
+805	perpetuo perpetue perpetua
+806	auxiliis auxilii
+807	mercatum mercatu
+808	stigandi stigando stigand
+809	exempla exemplar exemplo
+810	forstal forestal
+811	consanguinitatis consanguinitate
+812	patronum patronus
+813	legalium regalium
+814	sentiat sentiant
+815	securus securius secutus
+816	actiones actionis
+817	inuenit inueniat
+818	latrone latronem latrones matrone
+819	eadmundi eadmundo edmundi
+820	rameseie ramesie
+821	antiquis antiquus antiqui antiquas
+822	montibus fontibus
+823	placitis placiti
+824	merston mereston merton
+825	eligeret eligere
+826	uidetur uidentur uideatur uidemur
+827	pericula periculo
+828	uicarios uicario uicarius
+829	firmior firmiori
+830	cuilibet quilibet
+831	fihtwite fitwite
+832	habenda habendas habendam
+833	optinere obtinere
+834	indignus indignum
+835	alfredus aldredus
+836	mansurum mansuram
+837	inueniri inuenire
+838	incuriam incuria iniuriam
+839	expensis expensas
+840	hactenus actenus
+841	perfecte perfecta
+842	liberas libertas liberos libras liberis literas liberam libera
+843	leofrici leofrico
+844	anglicis anglicus anglici
+845	inimico inimicos inimici
+846	parentum parentem
+847	continua continue continuo
+848	celestia celesti
+849	reparare reparari
+850	angliam anglicam anglia
+851	termini terminis termino
+852	hemstede hamstede
+853	robertum robertus
+854	habentem habentes
+855	wintonia wintonie
+856	existat existant exstat
+857	cuiusque huiusque
+858	credatur creditur
+859	ailwinus alwinus
+860	uicesima uicesimo
+861	scilicet silicet
+862	proprios proprio propriis
+863	dedicate dedicata
+864	delictis delicti
+865	ducentis ducentas
+866	aliisque aliasque
+867	auctore auctorem autore auctor
+868	quisquam quicquam
+869	uirtute uirtutem
+870	deputate deputata
+871	propriam proprium propria
+872	tractat tractatu
+873	debebant debebat debeant
+874	martiris martiri
+875	dextera dexteram dextra
+876	dapiferi dapifer
+877	clerici clericis
+878	boklonde boclonde
+879	tenendo tendendo tenenda
+880	westona westonam westone weston
+881	debentur debetur
+882	wiltonie wintonie
+883	euenerit uenerit
+884	uicarium uicarius
+885	prelatus prefatus
+886	anglica anglicam anglia anglici anglico anglice
+887	londone londonie london
+888	aduentus aduentum
+889	mercatis mercatos
+890	diuitias diuitiis
+891	aliaque aliasque alique
+892	precepit precepi
+893	diabolus diabolum
+894	consilia consilio
+895	uiuentes uiuente
+896	donandam donandum
+897	primati primatis
+898	deferant dederant
+899	hundreda hundred hundredo
+900	extrema extremam extremo extreme
+901	liberius liberis
+902	corporis corpori
+903	alfricus wlfricus
+904	denarios denariis
+905	potentie potentia
+906	adiacet adiacent
+907	dederat dederant dederit deerat dederam
+908	uigesimo uicesimo
+909	westmonasterium westmonasterii
+910	peregrinationem peregrinationis
+911	animaduersionis animaduersione
+912	celebrationibus celebrationis
+913	eternam eterna eternum eternas
+914	externo eterno
+915	ueniet ueniret
+916	conuersantibus conseruantibus
+917	statuo statuto
+918	paratus paratum
+919	decebat debebat
+920	patroni patrono
+921	electis electus electi lectis electos electio
+922	ipsarum ipsorum
+923	sanctos sanctus sancto sanctis
+924	donatam donatas dotatam donata donatum
+925	depingo deping
+926	westune estune westone
+927	liberet libere
+928	habitum habitus habitu
+929	quantum quartum
+930	indigni indigne insigni
+931	gaudet gaudeat
+932	alteram altera alterum
+933	perdat perdant
+934	rogatu rogatus
+935	mundane mundana
+936	legali legalis
+937	dicitur ducitur dicetur
+938	quasdam quosdam quandam quadam
+939	legibus regibus
+940	ditioni ditione
+941	augusto augusti
+942	debiti debitis
+943	dicimus diximus ducimus
+944	aquarum quarum
+945	publice publica
+946	modica modicam
+947	ceteri ceteris
+948	gentes agentes
+949	martini martiri
+950	aliter taliter
+951	fratres fratris fratrem fratre
+952	pecunie pecunia
+953	ditauit ditaui
+954	humili humilis
+955	uocant uocante
+956	uestris uestri
+957	castri castris
+958	extitit extiti
+959	idoneum idoneus
+960	mortuo mortuos
+961	inferno inferni
+962	habita habitas
+963	donatus donamus donatum donatas
+964	consecrationem consecrationis
+965	regine regione
+966	seculi seculis
+967	superni superne
+968	insula insulam
+969	fratri fratris
+970	gratia gratias gratiam
+971	plenius plenus
+972	rogamus rogatus
+973	librum liberum
+974	aliquos aliquo aliquod aliquas aliquot aliquis
+975	remedia remedio
+976	relicta delicta
+977	famulus famulis
+978	fuerit fuerint
+979	numerum numerus
+980	nostras nostros nostris nostra nostram
+981	curaui curauit
+982	godwin godwino godwini godwine
+983	pastori pastor pastore
+984	minori minoris
+985	dotata dotatam
+986	auribus auibus
+987	tanquam tamquam
+988	fuerunt fuerint fuerant
+989	stoces stockes
+990	statuit statui
+991	solidis solitis solidos
+992	futuri futuris
+993	istius iustius
+994	positus positum positis
+995	monitus monitu
+996	tenere teneret
+997	heredem heredes heredum
+998	ordine ordines ordinem
+999	wlstani alstani
+1000	uocatis uocatus
+1001	quietum quietam
+1002	comite comites comitem
+1003	nepoti nepotis
+1004	natalis natali
+1005	presul presule
+1006	teneat tenebat teneant
+1007	soluant soluat
+1008	ideoque idemque
+1009	diuisa diuisas
+1010	iudici iudicis iudicia iudicii
+1011	uicini uicinis
+1012	burtun burtune
+1013	utatur utantur
+1014	pontium montium
+1015	ueteri ueteris
+1016	nominis hominis dominis
+1017	prolata prolati probata
+1018	integro integra integre
+1019	pertune bertune
+1020	cristum cristus
+1021	idoneos idoneis idoneus idoneo
+1022	egerit egerint
+1023	decimum decimam
+1024	honore honorem
+1025	auditu auditum auditui
+1026	optulit obtulit optuli
+1027	darente darent
+1028	iustus iustius
+1029	signata dignata
+1030	pereant perdant
+1031	siwardo siward
+1032	captura capture
+1033	graciam gracia gratiam
+1034	reliquo reliqua reliqui
+1035	ultimis ultimus
+1036	fraude fraudem
+1037	paterno paterne paterna paterni
+1038	uolente nolente
+1039	liberi liberis
+1040	eadwino eadwini eadwine
+1041	ablatum oblatum
+1042	tempore tempora
+1043	diuinis diuini
+1044	feminam femina
+1045	homines homine hominem hominis
+1046	strand strande
+1047	malorum maiorum
+1048	populis populi populus
+1049	familie familia
+1050	egregie egregii
+1051	quarta quartam
+1052	albanus albanum
+1053	uinculo uincula
+1054	benigno benigne
+1055	eboraci eboraco
+1056	uolebat solebat
+1057	oswaldi oswaldo
+1058	donaui donauit
+1059	studui studuit
+1060	formata firmata
+1061	nobilem nobile
+1062	aderant aderat
+1063	alienus alienis alienum
+1064	futuros futuris futuro
+1065	notatis notati
+1066	conuersationis conuersationem
+1067	crimine crimina
+1068	piisimo piisimi piisime
+1069	elinton clinton
+1070	gratis gratias
+1071	fratrum aratrum fratrem
+1072	fundere fundare
+1073	certius certis
+1074	nostro nostros
+1075	adepti adeptis
+1076	cuncti cunctis
+1077	germane germani germano
+1078	osketel asketel
+1079	felici felicis
+1080	misere miserie
+1081	peteret petere
+1082	secundo secundi secunda
+1083	soluti solutio
+1084	ceteros ceteris ceteras cetero
+1085	fauorem fauore
+1086	patria patriam
+1087	comitis comites comiti
+1088	lectum electum
+1089	nobili nobilis
+1090	tribuit tribuat
+1091	pondere ponere
+1092	nortuna nortona
+1093	alicui alicubi
+1094	edictum dictum
+1095	fideles fidelem fidele fidelis
+1096	anglis angelis
+1097	cristianitatis cristianitate
+1098	eisdem eiusdem
+1099	quoniam quondam
+1100	terciam tercia tertiam
+1101	eadgaro eadgari
+1102	libero liberos
+1103	edgari eadgari
+1104	domina dominam
+1105	seruire seruare
+1106	iniusta iniuste
+1107	suique suisque
+1108	memorie memoria
+1109	pagina paginam
+1110	haberet habere
+1111	inuenta inuente
+1112	libris liberis
+1113	solidam solidum solida
+1114	uiuenti uiuente
+1115	uestrum uestram
+1116	minores minoris minorem minore
+1117	uestra uestram
+1118	aliquid aliquod aliqui aliquis
+1119	contra econtra
+1120	altaria altari altaris
+1121	scitis sciatis
+1122	deuoti deuotis
+1123	daturus daturum
+1124	adiecit adieci
+1125	iudices iudicis iudicem iudice
+1126	homini hominis
+1127	positam positum
+1128	humbram humbra
+1129	stagni stagnis
+1130	salute salutem
+1131	alfredi aldredi
+1132	rectis rectius
+1133	cunctos cunctis
+1134	agente agentes
+1135	decima decimam
+1136	aditum auditum
+1137	meipsum seipsum
+1138	iudicum iudicem
+1139	quietis quieti quietas
+1140	decreto decreti decreta
+1141	preceps preces precepi
+1142	umquam numquam
+1143	decanum decanus
+1144	districtionem distributionem
+1145	maiori maioris
+1146	exigere eligere erigere
+1147	mortune mortun
+1148	simili similis
+1149	redacta redacte
+1150	secreta decreta
+1151	dignius dignus
+1152	regali regalis
+1153	boriali boreali
+1154	dictaui ditaui
+1155	imperio imperii
+1156	quodam quondam quosdam
+1157	ueniat ueniant
+1158	facere facerem
+1159	tributo tribuo tributa
+1160	conatur ponatur
+1161	prioris priori priores
+1162	recepi precepi
+1163	quartus quartum
+1164	torneia torneie
+1165	manerio manerii maneria
+1166	argento argenti
+1167	honori honoris
+1168	deique denique
+1169	congruo congrue congrua
+1170	cenobio cenobii
+1171	dimidie dimidio dimidii dimidia
+1172	cetera ceteras
+1173	sepulto sepulta
+1174	scedula sedula
+1175	mortuus mortuis mortuos
+1176	futuram futurum futura
+1177	fuerat fuerant
+1178	expedit expetit
+1179	inuidie insidie
+1180	oblata oblatam
+1181	croftos croftes croftis
+1182	priore priores
+1183	maneat maneant
+1184	ueterem ueterum ueteres
+1185	aliquem alique aliquam
+1186	uidente uiuente
+1187	grauis grauius
+1188	notatur nitatur
+1189	euentu euentum euentus
+1190	peracto peracta
+1191	anglos angelos
+1192	quoque quosque quodque
+1193	subsequentium subsequentibus
+1194	adepta adeptas
+1195	probat probata
+1196	supramemorata supramemoratis supramemoratum
+1197	godric godrici
+1198	domnus dominus
+1199	eliens eliensi
+1200	tenorem tenore
+1201	nititur nitatur
+1202	seruari seruare
+1203	uenire ueniret
+1204	maiore maiorem
+1205	xxxiiii xxiiii xxxiii
+1206	negotio negotia
+1207	adeptus adeptis adeptas
+1208	waltero altero
+1209	stronde strande strode
+1210	famuli famulis
+1211	eduuino eduuine
+1212	placito placiti
+1213	saluti salutis
+1214	diuinam diuinum diuina
+1215	liquido liquide
+1216	eripere erigere
+1217	regula regulam
+1218	diuidit diuisit
+1219	utuntur utantur
+1220	singula singuli
+1221	solium solidum
+1222	sumptus sumptu
+1223	testium tertium
+1224	habeant habeat habent
+1225	uixerit uiderit
+1226	quique quinque quisque
+1227	septima septimo
+1228	fundata fundate
+1229	ailwini ailwino
+1230	ultimum ultimam ultimus
+1231	milites milite
+1232	suscipi suscepi
+1233	idonei idoneis
+1234	andrea andream andreas
+1235	deficit deuicit defecit
+1236	miserit miseria miserie
+1237	comitum comitem
+1238	domorum donorum
+1239	iustis iustius
+1240	alieni alienis
+1241	inopiam inopia
+1242	meisque eisque meique
+1243	ordinis ordines
+1244	duximus diximus ducimus
+1245	actuum acturum
+1246	implere impleri
+1247	cartule cartula
+1248	nortone nortona
+1249	nimirum nimium
+1250	stokes stockes
+1251	uicarii uicario
+1252	donaria donari
+1253	quieta quietam quietas
+1254	libitum licitum
+1255	audiui auditui audiuit
+1256	gratam gratiam
+1257	fideli fidelis
+1258	floreat floret
+1259	militum milium
+1260	eldred ealdred
+1261	ualeat ualeant
+1262	crofte croftes
+1263	anatematizati anatematizatus
+1264	libros liberos
+1265	literis literas liberis
+1266	augeant audeant augeat
+1267	labore laborem
+1268	idcirco icirco
+1269	diabolo diaboli
+1270	requiem requie
+1271	nostrum nostram
+1272	mortui mortuis
+1273	fluuius fluuium
+1274	nauibus auibus
+1275	tertia tertiam
+1276	ingenio ingenii
+1277	anglie anglice
+1278	remunerationis remuneratione
+1279	prelati prefati prolati prelato
+1280	populum populus
+1281	debent debeant
+1282	dimisit diuisit
+1283	sitque sintque
+1284	audiunt audiuit
+1285	excepta excepto
+1286	debeat debeant debebat
+1287	hocton houcton
+1288	regale regalem
+1289	pasture pastore
+1290	generi generis
+1291	debitam debita debitum
+1292	bonorum donorum
+1293	quandiu quamdiu
+1294	saltem salutem
+1295	ipseque ipsaque
+1296	mulier muliere
+1297	legalem regalem
+1298	gloriam gloria
+1299	audeat gaudeat audeant
+1300	auxilio auxilii
+1301	burtone burtune
+1302	faciat faciant
+1303	sanctam sancta sanctum
+1304	premium pretium
+1305	delicto delicti delicta
+1306	angeli angelis
+1307	ceterum ueterum
+1308	habebam habeam habebat
+1309	quedam quendam
+1310	mortis mortuis
+1311	statuta statuti statuto
+1312	aliqua aliquam aliquas
+1313	stanham stalham
+1314	ultima ultimam
+1315	speciem specie
+1316	contradictio contradictione
+1317	ligatus ligatum
+1318	sancti sanctis
+1319	decano decanos
+1320	proxima proximo
+1321	hominum dominum hominem
+1322	directe dilecte
+1323	pratum paratum
+1324	eiusque eisque
+1325	aldredo aldredi
+1326	misericorditer misericordie
+1327	equidem quidem
+1328	nostri nostris
+1329	modicum modicam
+1330	edwine eadwine
+1331	cristes cristus

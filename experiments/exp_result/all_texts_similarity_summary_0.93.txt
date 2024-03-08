@@ -1,0 +1,191 @@
+Group	Words
+1	modingahammesgemæra modingahammesgemæro
+2	cyselhyrstesgemæro cyselhyrstesgemæra
+3	incomprehensibili incomprehensibilis inconprehensibili
+4	wigraceastrescire wigeraceastrescire
+5	westmonasteriensi westmonasteriensis
+6	wigerceastrescire wigeraceastrescire wigercestrescire
+7	ecclesiasticorum aecclesiasticorum æcclesiasticorum eclesiasticorum
+8	hyscendenesmearce hyscandenesmearce
+9	snotingehamscire esnotingehamscire
+10	astipulationibus adstipulationibus
+11	transgresionibus transgressionibus
+12	excommunicauerunt excommunicaverunt
+13	adstipulacionibus adstipulationibus
+14	quieteclamauerunt quietclamauerunt
+15	excommunicationem excomunicationem
+16	esnotinghamscire esnotingehamscire
+17	cyssestanesgemæro cyssestanesgemæra
+18	cantebriggesire cantebriggescire
+19	recompensationem reconpensationem recompensatione
+20	flesmangurestret flesmangerestret
+21	reaedificatione reaedificationem reedificatione
+22	herigeardeshamme hærigeardeshamme
+23	administrationem administratione administrationum aministrationem
+24	premonstratensis premonstratensi
+25	predecessoribus praedecessoribus prædecessoribus predecesoribus
+26	cantebriggescira cantebriggescire cantebriggeshira cantebruggescira cantebriggscira
+27	immarcessibilium inmarcessibilium immarcescibilium
+28	transfretationem transfretatione
+29	consuetudinarii consuetudinariis consuetudinarie consuetudinario consuetudinaria
+30	consentientibust consentientibus
+31	salopesberiensi salopesberiensis
+32	praedestinatione predestinatione
+33	westmonasterium westmonasteriurm wesmonasterium
+34	arciepiscopatum archiepiscopatum arciepiscopatui arciepiscopatu arciepiscopatus
+35	nortumberlandiam nortumberlandia
+36	suppellectilibus supellectilibus
+37	consencientibus consenscientibus conscencientibus consensientibus consentientibus
+38	administrationi administrationis administratione
+39	cresbrescentibus crebrescentibus
+40	dorcascistrensis dorcacistrensis
+41	wirecestrescire wireceastrescire wirecestresire wirecestrescira wirecestrescir
+42	cantebrugiescira cantebruggescira
+43	perturbacionibus perturbationibus
+44	consuetudinibus consuetudininbus
+45	aministrationis administrationis
+46	dirationauerunt disrationauerunt
+47	quitaclamatione quietaclamatione
+48	ierosolimitanis iherosolimitanis ierosolimitani
+49	archiepiscoporum arciepiscoporum
+50	archiepiscopatus arciepiscopatus archiepiscopatum
+51	excommunicationi excomunicationi
+52	æcclesiasticarum æcclesiasticorum
+53	consuetudinarias consuetudinariis consuetudinaria
+54	circumjacentibus circumiacentibus
+55	reedificationem reaedificationem reedificatione
+56	subscripcionibus subscriptionibus
+57	excomunicationis excomunicationi
+58	excomunicatione excomunicationem excomunicationi
+59	aecclesiasticam aecclesiasticae aecclesiastica ecclesiasticam aecclesiasticum
+60	hospitalariorum hospitelariorum
+61	preuaricationem preuaricacionem prevaricationem preuaricatione
+62	tergiversatione tergiuersatione tergiversacione
+63	circumjacentium circumjacencium circumiacentium
+64	sermocinationis sermocinationes sermotinationis sermocinacionis
+65	corroborationem corroboratione coroborationem
+66	sanctimonilium sanctimonialium
+67	aldermanesberia aldermanesberi
+68	ecclesiasticis aecclesiasticis
+69	lindocolinensi lindocolinensis
+70	gloucestriensi glouecestriensi
+71	diratiocinauit disratiocinauit
+72	hierusalimitani ierusalimitani
+73	aecclesiasticus aecclesiasticis aecclesiasticum
+74	quietaclamancia quietaclamantia
+75	bucinghamscira bucingehamscira
+76	quietumclamaui quietumclamauit
+77	guarantizabimus garantizabimus guarentizabimus gwarantizabimus
+78	wirecestrensis wigrecestrensis
+79	incurruptibilem incorruptibilem
+80	tranquilitatis tranquillitatis
+81	warantizabimus gwarantizabimus
+82	heortfordscira heortfordiscira
+83	wincelcumbensis wincecumbensis
+84	gloucestresire gloucestreshire gloucestrescire
+85	septentrionalis septentrionali
+86	contradicctione contradictione contradiccione
+87	cantebrigscira cantebriggscira
+88	rouercestrensis rouecestrensis
+89	hereditabiliter hereditabilter
+90	coaedificatione coedificatione
+91	corroborauerunt coroborauerunt corroboraverunt
+92	berkelaihernese berkelaihernes
+93	ireuocabiliter inreuocabiliter
+94	excommunicentur excommunicetur
+95	oxenefordesire oxenefordescire
+96	adnihilationem adnichilationem
+97	recompensacione recompensatione
+98	westimonasterio westmonasterio
+99	wedreringesete weddreringesete
+100	sermocinatione sermocinationes
+101	rationabiliter irationabiliter
+102	crisitianitatis cristianitatis
+103	garentizabimus guarentizabimus
+104	schiraburnensis schireburnensis
+105	contradictionem contradictione contradictiones
+106	astipulantibus adstipulantibus
+107	huntendonscira huntendonescira
+108	saresbiriensium saresburiensium
+109	bucingehamscire bucingehamscira
+110	participationem participatione
+111	contradictionis contradictioni contradictiones
+112	aecclesiastice aecclesiasticae
+113	nortumberlanda nortumberlandia
+114	oxenfordescire oxenefordescire
+115	anathematizetur anatematizetur
+116	constabularius conestabularius
+117	peregrinationem peregrinatione
+118	glowecestriensi glouecestriensi glowcestriensi
+119	anatematizatus anathematizatus
+120	coedificacione cohedificacione
+121	septemtrionalem septentrionalem
+122	scireburnensis schireburnensis
+123	submonitionibus sumonitionibus
+124	huntingdonscire huntingdonshire
+125	cristianitatem christianitatem
+126	presentialiter praesentialiter
+127	wirecestrascira wirecestrescira
+128	oxenefordscire oxenefordescire
+129	eclesiasticarum eclesiasticorum
+130	innumerabilibus inumerabilibus
+131	frequentantivis frequentativis
+132	disrationauimus dirationauimus
+133	dirationcinatum diratiocinatum
+134	oxenefordscira oxenefordescira
+135	excellentissimo excellentissimi
+136	arcidiaconatuum arcidiaconatum
+137	immarcessibilem inmarcessibilem
+138	archipontificii archipontificis
+139	huntedonescira huntendonescira
+140	preuaricationis prevaricationis preuaricacionis
+141	infangeneþeofe infangeneþeofes
+142	arcepiscopatus arciepiscopatus
+143	wirecestresira wirecestrescira
+144	sabbellianasque sabellianasque
+145	licetfeldnensis licetfeldensis
+146	wircestrescira wirecestrescira
+147	ierosolimitarum ierosolimitanum
+148	coniusticiariis coniusticiarii
+149	adproprinquante adpropinquante
+150	croptunesgemæro croptunesgemæra
+151	lichesfeldensis licesfeldensis lichefeldensis
+152	archisacerdoti archisacerdotis
+153	predestinacione predestinatione
+154	wigrecestensis wigrecestrensis
+155	transgressionum transgresionum
+156	principalitatem principalitate
+157	sanctimonalium sanctimonialium
+158	amplificatione amplificationem
+159	christianitate christianitatem
+160	contemplationis contemplacionis contemplationi
+161	uicearcidiacono uicearcidiaconi
+162	quieticlamantia quieteclamantia quietaclamantia
+163	archiespiscopus archiepiscopus
+164	calumpniabantur calumpniabatur
+165	expedicionisque expeditionisque
+166	inestimabiliter inæstimabiliter
+167	archiepipscopus archiepiscopus
+168	adinventionibus adinuentionibus
+169	prævaricationis prevaricationis
+170	animadversionis animaduersionis
+171	machinacionibus machinationibus
+172	anathematizatum anatematizatum anathematizatus
+173	nortumberlandie nortumberlandia
+174	beaddingaburnan beadingaburnan
+175	honorificentius honorificetius
+176	confederatione confederationem
+177	wigresestrasira wigresestrasia
+178	aministratione administratione aministrationem
+179	ierosolimitanam ierosolimitanum
+180	christianitatis cristianitatis
+181	sanctimonialum sanctimonialium
+182	prevaricacionem preuaricacionem prevaricationem
+183	cunestabularius conestabularius
+184	consideratione considerationem
+185	incorruptibile incorruptibilem
+186	turstainewater turstaineswater
+187	prævaricationem prevaricationem
+188	ecclesiasticum aecclesiasticum
+189	expedicionemque expeditionemque
+190	ministrationem aministrationem
