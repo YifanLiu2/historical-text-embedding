@@ -3,19 +3,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
+from tqdm import tqdm
 from nltk.tokenize import word_tokenize
 from Levenshtein import ratio, distance
 from itertools import product
 
-"""AngTextPath = '../data/AngOrdtext'
-AngDatePath = '../data/AngOrddate'
-EngTextPath = '../data/EngOrdtext'
-EngDatePath = '../data/EngOrddate'"""
+AngTextPath = 'data/AngOrdtext'
+AngDatePath = 'data/AngOrddate'
+EngTextPath = 'data/EngOrdtext'
+EngDatePath = 'data/EngOrddate'
 
-AngTextPath = 'data\AngOrdtext'
+"""AngTextPath = 'data\AngOrdtext'
 AngDatePath = 'data\AngOrddate'
 EngTextPath = 'data\EngOrdtext'
-EngDatePath = 'data\EngOrddate'
+EngDatePath = 'data\EngOrddate'"""
 
 def read_text_data(filepath):    
     sentences = []
@@ -34,7 +35,7 @@ def read_data(filepath):
     return all_words
 
 def get_word_count(sentences):
-    all_words = [word for sentence in sentences for word in sentence]
+    all_words = [word for word in sentences]
     word_count = len(all_words)
     distinct_word_count = len(set(all_words))
     return all_words, word_count, distinct_word_count
@@ -64,18 +65,50 @@ def max_similarity(text1, text2):
     """
     return 1 - distance(text1, text2) / max(len(text1), len(text2))
 
-def token_edit_levenstein_similarity_normalized(distinct_word_list):
+def similarity_report(distinct_word_list, threshold=0.85, desc='Calculating similarity'):
     '''
     takes a list of distinct words,
-    returns a dataframe with all possible combinations of words and their similarity scores
+    returns a dataframe with combinations with similarity score higher than 0.85
     '''
-    df = pd.DataFrame(set(product(distinct_word_list, repeat=2)), columns=['Word1', 'Word2'])
-    # ratio = 1 - (distance / (len1 + len2))
-    df["ratio_similarity"] = df.apply(lambda x: ratio(x['Word1'], x['Word2']), axis=1)
-    # max_similarity = 1 - distance / max(len1, len2)
-    df["max_similarity"] = df.apply(lambda x: max_similarity(x['Word1'], x['Word2']), axis=1)
-    df = df[df['max_similarity'] != 1.0]
+    pbar = tqdm(total=len(distinct_word_list), desc=desc)
+    dfs = []
+    for word1 in distinct_word_list:
+        for word2 in distinct_word_list:
+            similarity = max_similarity(word1, word2)
+            if 1 > similarity > threshold:
+                df = pd.DataFrame({'Word1': [word1], 'Word2': [word2], 'Similarity': [similarity]})
+                dfs.append(df)
+        pbar.update(1)
+    pbar.close()
+    df = pd.concat(dfs, ignore_index=True)
     return df
+
+def similarity_summary(df, desc = 'Grouping similar words'):
+    '''
+    takes a dataframe with word1 and word2 that are similar,
+    returns a dataframe with groups of similar words
+    '''
+    groups = []
+    explored = set()
+    pbar = tqdm(total=len(df['Word1']), desc=desc)
+    for word1 in df['Word1']:
+        if word1 not in explored:
+            group = [word1]
+            explored.add(word1)
+            word2 = df[df['Word1'] == word1]['Word2']
+            group.extend(word2)
+            for w in word2:
+                explored.add(w)
+            groups.append(group)
+        pbar.update(1)
+    pbar.close()
+    summary_df = pd.DataFrame({'Group': range(1, len(groups)+1), 'Words': [' '.join(group) for group in groups]})
+    return summary_df
+
+def word_to_similar_group(word_list, threshold=0.85, desc='Grouping similar words', path='similarity_summary.txt'):
+    df_test = similarity_report(word_list, threshold=threshold, desc=desc+ ' report')
+    summary_test = similarity_summary(df_test, desc=desc + ' summary')
+    summary_test.to_csv(path, sep='\t', index=False)
 
 if __name__ == "__main__":
     # read data
@@ -88,24 +121,29 @@ if __name__ == "__main__":
     ang_df = pd.DataFrame({'Text': AngText, 'Date': AngDate})
     eng_df = pd.DataFrame({'Text': EngText, 'Date': EngDate})
 
+    # convert date type
     ang_df['Date'] = ang_df['Date'].astype(int)
     eng_df['Date'] = eng_df['Date'].astype(int)
+    ang_df['Text'] = ang_df['Text'].apply(lambda x: ' '.join(x))
+    eng_df['Text'] = eng_df['Text'].apply(lambda x: ' '.join(x))
     ang_df['Text'] = ang_df['Text'].astype(str)
     eng_df['Text'] = eng_df['Text'].astype(str)
 
-    print(ang_df.head())
-    print(ang_df.info())
-    print(eng_df.head())
-    print(eng_df.info())
 
     # filter for specific time periods
     ang_spe_df = ang_df[(ang_df['Date'] >= 900) & (ang_df['Date'] <= 1066)]
     eng_spe_df = eng_df[(eng_df['Date'] >= 1067) & (eng_df['Date'] <= 1198)]
 
-    ang_spe_all_words, ang_spe_words_set = get_word(ang_spe_df)
-    eng_spe_all_words, eng_spe_words_set = get_word(eng_spe_df)
+    ang_spec_all_words, ang_spec_words_set = get_word(ang_spe_df)
+    eng_spec_all_words, eng_spec_words_set = get_word(eng_spe_df)
+    
+    ang_spe_words_list = list(ang_spec_words_set)
+    eng_spe_words_list = list(eng_spec_words_set)
 
-    print('Anglo-Saxon English: ', len(ang_spe_all_words))
-    print('Middle English: ', len(eng_spe_all_words))
-    print('Anglo-Saxon English: ', len(ang_spe_words_set))
-    print('Middle English: ', len(eng_spe_words_set))
+    word_to_similar_group(ang_spe_words_list, 
+                          desc='Grouping similar words in anglo-saxon', 
+                          path='experiments/exp_result/anglo_saxon_similarity_summary.txt')
+    
+    word_to_similar_group(eng_spe_words_list,
+                        desc='Grouping similar words in middle english', 
+                        path='experiments/exp_result/middle_english_similarity_summary.txt')

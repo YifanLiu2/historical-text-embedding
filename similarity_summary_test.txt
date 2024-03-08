@@ -1,0 +1,6 @@
+Group	Words
+1	byrhelm burhelm
+2	æþelnoðe æþelnoðes
+3	seolesensis seolesiensis
+4	suttun suttune
+5	gubernando gubernandi
