@@ -136,14 +136,23 @@ if __name__ == "__main__":
 
     ang_spec_all_words, ang_spec_words_set = get_word(ang_spe_df)
     eng_spec_all_words, eng_spec_words_set = get_word(eng_spe_df)
+    all_words_set = ang_spec_words_set.union(eng_spec_words_set)
     
     ang_spe_words_list = list(ang_spec_words_set)
     eng_spe_words_list = list(eng_spec_words_set)
+    all_words_list = list(all_words_set)
 
     word_to_similar_group(ang_spe_words_list, 
+                          threshold=0.9,
                           desc='Grouping similar words in anglo-saxon', 
                           path='experiments/exp_result/anglo_saxon_similarity_summary.txt')
     
     word_to_similar_group(eng_spe_words_list,
-                        desc='Grouping similar words in middle english', 
-                        path='experiments/exp_result/middle_english_similarity_summary.txt')
+                          threshold=0.9,
+                          desc='Grouping similar words in middle english', 
+                          path='experiments/exp_result/middle_english_similarity_summary.txt')
+    
+    word_to_similar_group(all_words_list,
+                          threshold=0.9,
+                          desc='Grouping similar words in all texts',
+                            path='experiments/exp_result/all_texts_similarity_summary.txt')
