@@ -204,7 +204,7 @@ def generate_embeddings(file_path, model, tokenizer):
     # extract layers from each model output
     corpus = list(read_corpus(file_path))
     chunks = [chunk for doc in corpus for chunk in chunk_text(doc, tokenizer)]
-    for chunk in chunk:
+    for chunk in chunks:
         inputs = tokenizer(chunk, return_tensors='pt', padding='max_length', truncation=True, max_length=512, return_attention_mask=True)
         input_ids = inputs['input_ids']
         att_mask = inputs['attention_mask']
