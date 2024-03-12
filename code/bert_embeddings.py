@@ -6,7 +6,7 @@ import smart_open
 
 import numpy as np
 import gensim
-from transformers import BertModel, BertForMaskedLM, BertTokenizer, get_linear_schedule_with_warmup, DataCollatorForLanguageModeling
+from transformers import BertModel, BertForMaskedLM, BertTokenizer, get_linear_schedule_with_warmup, DataCollatorForLanguageModeling, Trainer, TrainingArguments
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torch.optim import AdamW
@@ -87,7 +87,7 @@ def chunk_text(text, tokenizer, max_length=512):
     return chunks
 
 
-def train(model, dataloader, lr, epochs, device):
+def train(model, data_collator, dataset, batch_size, lr, epochs, output_dir):
     """
     Trains the BERT model using the provided DataLoader, learning rate, number of epochs, and device.
 
@@ -95,37 +95,58 @@ def train(model, dataloader, lr, epochs, device):
     :param dataloader: DataLoader providing batches of training data.
     :param lr: Learning rate for the optimizer.
     :param epochs: Number of training epochs.
-    :param device: Device ('cpu' or 'cuda') to train on.
     """
-    optimizer = AdamW(model.parameters(), lr)
-    steps = len(dataloader) * epochs
-    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=steps)
+    # optimizer = AdamW(model.parameters(), lr)
+    # steps = len(dataloader) * epochs
+    # scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=steps)
 
-    for epoch in range(epochs):
-        model.train()
-        total_loss = 0
+    # for epoch in range(epochs):
+    #     model.train()
+    #     total_loss = 0
         
-        progress_bar = tqdm(dataloader, desc=f"Epoch {epoch + 1}/{epochs}", leave=False, unit="batch")
+    #     progress_bar = tqdm(dataloader, desc=f"Epoch {epoch + 1}/{epochs}", leave=False, unit="batch")
         
-        for batch in progress_bar:
-            inputs, masks = batch["input_ids"], batch["attention_mask"]
-            inputs = inputs.to(device)
-            masks = masks.to(device)
+    #     for batch in progress_bar:
+    #         inputs, masks = batch["input_ids"], batch["attention_mask"]
+    #         inputs = inputs.to(device)
+    #         masks = masks.to(device)
 
-            model.zero_grad()
+    #         model.zero_grad()
 
-            outputs = model(input_ids=inputs, attention_mask=masks, labels=inputs)
-            loss = outputs.loss
-            total_loss += loss.item()
+    #         outputs = model(input_ids=inputs, attention_mask=masks, labels=inputs)
+    #         loss = outputs.loss
+    #         total_loss += loss.item()
 
-            loss.backward()
-            optimizer.step()
-            scheduler.step()
+    #         loss.backward()
+    #         optimizer.step()
+    #         scheduler.step()
             
-            progress_bar.set_postfix({"Loss": f"{loss.item():.4f}"})
+    #         progress_bar.set_postfix({"Loss": f"{loss.item():.4f}"})
         
-        avg_train_loss = total_loss / len(dataloader)
-        print(f"Epoch {epoch + 1}/{epochs} | Average Training Loss: {avg_train_loss:.4f}")
+    #     avg_train_loss = total_loss / len(dataloader)
+    #     print(f"Epoch {epoch + 1}/{epochs} | Average Training Loss: {avg_train_loss:.4f}")
+    model_dir = os.path.join(output_dir, model.__class__.__name__) 
+    log_dir = os.path.join(model_dir, "logs") 
+
+    os.makedirs(model_dir, exist_ok=True)
+    os.makedirs(log_dir, exist_ok=True) 
+    
+    training_args = TrainingArguments(
+        output_dir=model_dir,
+        num_train_epochs=epochs,
+        per_device_train_batch_size=batch_size,
+        learning_rate=lr,
+        logging_dir=log_dir,
+    )
+
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=dataset,
+        data_collator=data_collator,
+    )
+
+    trainer.train()
 
 
 def adapt(params, model_name, ang_file_path, eng_file_path, output_dir):
@@ -162,10 +183,9 @@ def adapt(params, model_name, ang_file_path, eng_file_path, output_dir):
     # prepare dataset and dataloader
     dataset = TextDataset(chunks, tokenizer)
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=True, mlm_probability=0.15)
-    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, collate_fn=data_collator)
 
     # train and save model
-    train(model, dataloader, lr=lr, epochs=epochs, device=device)
+    train(model, data_collator=data_collator, dataset=dataset, batch_size=batch_size, lr=lr, epochs=epochs, output_dir=output_dir)
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
 
@@ -184,7 +204,7 @@ def generate_embeddings(file_path, model, tokenizer):
     # extract layers from each model output
     corpus = list(read_corpus(file_path))
     chunks = [chunk for doc in corpus for chunk in chunk_text(doc, tokenizer)]
-    for chunk in corpus:
+    for chunk in chunk:
         inputs = tokenizer(chunk, return_tensors='pt', padding='max_length', truncation=True, max_length=512, return_attention_mask=True)
         input_ids = inputs['input_ids']
         att_mask = inputs['attention_mask']
@@ -255,8 +275,8 @@ def main(args):
     if not os.path.isfile(args.eng):
         raise FileNotFoundError(f"English corpus file not found at {args.eng}")
 
-    # # further pretrain BERT model
-    # adapt(params, args.model, args.ang, args.eng, args.out)
+    # further pretrain BERT model
+    adapt(params, args.model, args.ang, args.eng, args.out)
 
     # extract embeddings
     extract_embeddings(args.out, args.ang, args.eng, args.out)
