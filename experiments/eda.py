@@ -111,9 +111,7 @@ def normalize_scarce_words(scarce_words, word_list, threshold=0.85, desc='Normal
         max_freq = -1
         for w in word_list:
             similarity = max_similarity(word, w)
-            if similarity == 1:
-                next
-            if similarity > max_s:
+            if 1 > similarity > max_s:
                 max_s = similarity
                 max_word = w
         if max_s > threshold:
@@ -121,7 +119,39 @@ def normalize_scarce_words(scarce_words, word_list, threshold=0.85, desc='Normal
         pbar.update(1)
     pbar.close()
     return scarce_words_dict
+
+def compute_similarity(word, possible_words, threshold, scarce_words_dict):
+    max_s = 0
+    max_word = ''
     
+    # Compute similarities using vectorized operations
+    similarities = [max_similarity(word, w) for w in possible_words]
+    
+    max_sim_idx = np.argmax(similarities)
+    max_s = similarities[max_sim_idx]
+    max_word = possible_words.iloc[max_sim_idx]
+    
+    # Check similarity threshold
+    if max_s > threshold:
+        scarce_words_dict[word] = max_word
+
+def scarce_words_to_dict(df_freq, threshold=0.85, desc='Normalizing scarce words'):
+    '''
+    takes a dataframe with word and frequency, and a threshold,
+    returns a dictionary with the most similar word for each word in scarce_words
+    '''
+    scarce_words_dict = {}
+    len_scarce = df_freq[df_freq['Frequency'] <= 5].shape[0]
+
+    pbar = tqdm(total=len_scarce, desc='Normalizing scarce words')
+    for i in range(1, 6):
+        scarce_words = df_freq[df_freq['Frequency'] == i]['Word']
+        possible_words = df_freq[df_freq['Frequency'] > i]['Word']
+        for word in scarce_words:
+            compute_similarity(word, possible_words, threshold, scarce_words_dict)
+            pbar.update(1)
+    pbar.close()
+    return scarce_words_dict
 
 
 def similarity_summary(df, desc = 'Grouping similar words'):
@@ -148,11 +178,12 @@ def similarity_summary(df, desc = 'Grouping similar words'):
     summary_df = pd.DataFrame({'Group': range(1, len(groups)+1), 'Words': [' '.join(group) for group in groups]})
     return summary_df
 
-def word_to_similar_group(word_list, threshold=0.85, desc='Grouping similar words', 
+def word_to_similar_group(word_list, threshold=0.85, threshold_s = 0.9, desc='Grouping similar words', 
                           path1='similarity_report.txt', 
                           path2='similarity_summary.txt'):
     df_test = similarity_report(word_list, threshold=threshold, desc=desc+ ' report')
     df_test.to_csv(path1, sep='\t', index=False)
+    df_test = df_test[df_test['Similarity'] > threshold_s]
     summary_test = similarity_summary(df_test, desc=desc + ' summary')
     summary_test.to_csv(path2, sep='\t', index=False)
 
@@ -163,6 +194,17 @@ def file_to_dict(filepath):
         next(file)
         for line in file:
             key, value = line.strip().split()[0], line.strip().split()[1]
+            dictionary[key] = value
+
+    return dictionary
+
+def file_to_scarce_dict(filepath):
+    dictionary = {}
+
+    with open(filepath, 'r') as file:
+        next(file)
+        for line in file:
+            key, value = line.strip().split()[1], line.strip().split()[2]
             dictionary[key] = value
 
     return dictionary
@@ -230,11 +272,10 @@ def standardize_helper(sentences, scarce_dict, summary_dict, desc='Standardizing
         stand_sentence = []
         sentence = standardize_letters(sentence)
         for word in sentence:
-            print(word)
             if word in scarce_dict:
                 stand_sentence.append(scarce_dict[word])
             elif word in summary_dict:
-                if word = "tilesberia":
+                if word == "tilesberia":
                     print(word, word["tilesberia"])
                 stand_sentence.append(summary_dict[word])
             else:
@@ -273,6 +314,19 @@ def standardization_p2():
     scarce_words_df = pd.DataFrame(scarce_words_dict, index=['Value'])  
     scarce_words_df = scarce_words_df.T.reset_index()
     scarce_words_df.to_csv('experiments/result/scarce_words_dict.txt', sep='\t', index=True,
+                                           header=None)
+    
+def standardization_p2_revised():
+    '''
+    get standardization for scarce words in all texts
+    in which scarce words are words has frequency less than or equal to 5
+    '''
+    all_words_frequency = pd.read_csv('experiments/result/all_text_word_frequency.txt', sep='\t')
+    # all_words_frequency = all_words_frequency.sample(frac=0.05)
+    scarce_words_dict = scarce_words_to_dict(all_words_frequency, threshold=0.85, desc='Normalizing scarce words')
+    scarce_words_df = pd.DataFrame(scarce_words_dict, index=['Value'])  
+    scarce_words_df = scarce_words_df.T.reset_index()
+    scarce_words_df.to_csv('experiments/result/scarce_words_dict_revised.txt', sep='\t', index=True,
                                            header=None)
 
 def standardization_p3():
@@ -323,9 +377,9 @@ def standardization_p5():
     '''
     Given a dictionary of word standardization, we standardize all texts
     '''
-    stand_path = 'experiments/standardized_data_d2'
+    stand_path = 'experiments/standardized_data_d3'
     summary_dict = file_to_dict('experiments/result/summary_dict.txt')
-    scarce_dict = file_to_dict('experiments/result/scarce_words_dict.txt')
+    scarce_dict = file_to_scarce_dict('experiments/result/scarce_words_dict_revised.txt')
     AngText = read_text_data(AngTextPath)
     EngText = read_text_data(EngTextPath)
     FrText = read_text_data(FrTextPath)
@@ -338,20 +392,114 @@ def standardization_p5():
     AllStandText = AngStandText + EngStandText + FrStandText
     pd.DataFrame(AllStandText).to_csv(stand_path+'/AllStandText', sep=' ', index=False, header=False)
 
-def standardization_trial_2():
-    AngText = read_text_data(AngTextPath)
+def standardization_p6():
+    '''
+    Given a dictionary of word standardization, we standardize all texts
+    '''
+    stand_path = 'experiments/standardized_data_d3'
     summary_dict = file_to_dict('experiments/result/summary_dict.txt')
-    scarce_dict = file_to_dict('experiments/result/scarce_words_dict.txt')
-    AngText_then = standardize_helper(AngText, scarce_dict, summary_dict, desc='Standardizing AngText')
-    print(len(AngText))
-    print(len(AngText_then))
-    df = pd.DataFrame({'Original': AngText, 'Then':AngText_then})
-    print(df.head(10))
+    scarce_dict = file_to_scarce_dict('experiments/result/scarce_words_dict_revised.txt')
+    AngTextPath = 'experiments/standardized_data_d3/AngStandText'
+    EngTextPath = 'experiments/standardized_data_d3/EngStandText'
+    FrTextPath = 'experiments/standardized_data_d3/FrStandText'
+    AngText = read_text_data(AngTextPath)
+    EngText = read_text_data(EngTextPath)
+    FrText = read_text_data(FrTextPath)
+    AngStandText = standardize_helper(AngText, scarce_dict, summary_dict, desc='Standardizing AngText')
+    EngStandText = standardize_helper(EngText, scarce_dict, summary_dict, desc='Standardizing EngText')
+    FrStandText = standardize_helper(FrText, scarce_dict, summary_dict, desc='Standardizing FrText')
+    pd.DataFrame(AngStandText).to_csv(stand_path+'/AngStandText', sep=' ', index=False, header=False)
+    pd.DataFrame(EngStandText).to_csv(stand_path+'/EngStandText', sep=' ', index=False, header=False)
+    pd.DataFrame(FrStandText).to_csv(stand_path+'/FrStandText', sep=' ', index=False, header=False)
+    print("good")
+    AllStandText = AngStandText + EngStandText + FrStandText
+    pd.DataFrame(AllStandText).to_csv(stand_path+'/AllStandText', sep=' ', index=False, header=False)
+    print("good")
+
+def standardization_evaluation():
+    EngDatePath = 'data/EngOrddate'
+    FrDatePath = 'data/FrOrddate'
+    AngDatePath = 'data/AngOrddate'
+
+    AngTextPath = 'data/AngOrdtext'
+    EngTextPath = 'data/EngOrdtext'
+    FrTextPath = 'data/FrOrdtext'
+
+    AngStandTextPath = 'experiments/standardized_data_d3/AngStandText'
+    EngStandTextPath = 'experiments/standardized_data_d3/EngStandText'
+    FrStandTextPath = 'experiments/standardized_data_d3/FrStandText'
+    AllStandTextPath = 'experiments/standardized_data_d3/AllStandText'
+
+
+
+    AngStandText = read_text_data(AngStandTextPath)
+    EngStandText = read_text_data(EngStandTextPath)
+    FrStandText = read_text_data(FrStandTextPath)
+    AngText = read_text_data(AngTextPath)
+    EngText = read_text_data(EngTextPath)
+    FrText = read_text_data(FrTextPath)
+    AngDate = read_data(AngDatePath)
+    EngDate = read_data(EngDatePath)
+    FrDate = read_data(FrDatePath)
+
+    ang_df = pd.DataFrame({'Text': AngStandText,
+                    'Date': AngDate,
+                    'Origin': AngText})
+
+    ang_df['Text'] = ang_df['Text'].apply(lambda x: ' '.join(x))
+    ang_df['Origin'] = ang_df['Origin'].apply(lambda x: ' '.join(x))
+
+    ang_ori_all_words = []
+    for text in ang_df['Origin']:
+        tokens = text.split()
+        ang_ori_all_words.extend(tokens)
+
+    ang_stand_all_words = []
+    for text in ang_df['Text']:
+        tokens = text.split()
+        ang_stand_all_words.extend(tokens)
+
+    print("Ang ori", ang_ori_all_words[11])
+    print("Ang stand", ang_stand_all_words[11])
+    print("Ang ori", len(ang_ori_all_words))
+    print("Ang stand", len(ang_stand_all_words))
+    print("Ang ori distinct words", len(set(ang_ori_all_words)))
+    print("Ang stand distinct words", len(set(ang_stand_all_words)))
+    print("different words", len(set(ang_ori_all_words)) - len(set(ang_stand_all_words)))
+
+    eng_df = pd.DataFrame({'Text': EngStandText, 'Origin': EngText})
+    fr_df = pd.DataFrame({'Text': FrStandText, 'Origin': FrText})
+    ang_df = pd.DataFrame({'Text': AngStandText, 'Origin': AngText})
+    all_df = pd.concat([ang_df, eng_df, fr_df], ignore_index=True)
+
+    all_df['Text'] = all_df['Text'].apply(lambda x: ' '.join(x))
+    all_df['Origin'] = all_df['Origin'].apply(lambda x: ' '.join(x))
+
+    all_ori_all_words = []
+    for text in all_df['Origin']:
+        tokens = text.split()
+        all_ori_all_words.extend(tokens)
+
+    all_stand_all_words = []
+    for text in all_df['Text']:
+        tokens = text.split()
+        all_stand_all_words.extend(tokens)
+
+    print("All ori", all_ori_all_words[:10][:10])
+    print("All stand", all_stand_all_words[:10][:10])
+    print("All ori", len(all_ori_all_words))
+    print("All stand", len(all_stand_all_words))
+    print("All ori distinct words", len(set(all_ori_all_words)))
+    print("All stand distinct words", len(set(all_stand_all_words)))
+    print("different words", len(set(all_ori_all_words)) - len(set(all_stand_all_words)))
+    print("different words", len(set(all_ori_all_words)-set(all_stand_all_words)))
+
 
 
 
 if __name__ == "__main__":
-   standardization_p5()
+    standardization_p6()
+    standardization_evaluation()
 
 
 
