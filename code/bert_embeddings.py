@@ -89,7 +89,7 @@ def train_BERT(model_name, input_file, output_dir, is_pretraining):
         print("pre-train BERT model...")
         model = BertForMaskedLM(config=config)
         model_path = os.path.join(output_dir, "pretrained-bert")
-        train(model, model_path=model_path, data_collator=data_collator, dataset=dataset, epochs=10)
+        train(model, output_path=model_path, data_collator=data_collator, dataset=dataset, epochs=10)
 
     else:
         # fine-tune BERT model
@@ -100,5 +100,5 @@ def train_BERT(model_name, input_file, output_dir, is_pretraining):
         print(f"fine-tuned BERT model: {model_name}...")
         format_model_name = model_name.replace("/", "-")
         model_path = os.path.join(output_dir, f"fine-tuned-bert-{format_model_name}")
-        train(model, model_path=model_path, data_collator=data_collator, dataset=dataset, epochs=4)
+        train(model, output_path=model_path, data_collator=data_collator, dataset=dataset, epochs=4)
 
