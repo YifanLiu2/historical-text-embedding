@@ -16,15 +16,6 @@ def train(model, output_path, data_collator, dataset, epochs):
     :param dataset: The dataset to be used for training, an insance of datasets.Dataset.
     :param epochs: Number of training epochs.
     """
-    # detect training device
-    if torch.cuda.is_available():
-        print("CUDA is available. GPU: ", torch.cuda.get_device_name(0))
-    else:
-        print("CUDA is not available.")
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
-
     # create output dir
     os.makedirs(output_path, exist_ok=True)
 
@@ -108,6 +99,11 @@ def train_BERT(model_name, input_file, output_dir, is_pretraining):
         except Exception as e:
             raise RuntimeError(f"Failed to load model: {e}")
         print(f"fine-tuned BERT model: {model_name}...")
+        
+        # adjust tokenizer size for model fine-tune
+        model.resize_token_embeddings(len(tokenizer))
+
+        # define the output path to save model
         format_model_name = model_name.replace("/", "-")
         model_path = os.path.join(output_dir, f"fine-tuned-bert-{format_model_name}")
         train(model, output_path=model_path, data_collator=data_collator, dataset=dataset, epochs=4)
