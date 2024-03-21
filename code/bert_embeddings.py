@@ -16,6 +16,16 @@ def train(model, output_path, data_collator, dataset, epochs):
     :param dataset: The dataset to be used for training, an insance of datasets.Dataset.
     :param epochs: Number of training epochs.
     """
+    # detect training device
+    if torch.cuda.is_available():
+        print("CUDA is available. GPU: ", torch.cuda.get_device_name(0))
+    else:
+        print("CUDA is not available.")
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+
+    # create output dir
     os.makedirs(output_path, exist_ok=True)
 
     # define training arguments
