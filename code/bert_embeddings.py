@@ -1,7 +1,5 @@
 import os
-import argparse
-from transformers import BertModel, BertConfig, BertForMaskedLM, BertTokenizerFast, DataCollatorForLanguageModeling, Trainer, TrainingArguments
-import torch
+from transformers import BertConfig, BertForMaskedLM, BertTokenizerFast, DataCollatorForLanguageModeling, Trainer, TrainingArguments
 from datasets import Dataset
 
 from utils import *
