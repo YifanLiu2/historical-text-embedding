@@ -1,0 +1,57 @@
+import os
+from transformers import BertForSequenceClassification, BertTokenizerFast, Trainer, TrainingArguments
+from datasets import load_metric
+
+def evaluate(model_path, output_dir, dataset):
+    
+    tokenizer_path = os.path.join(output_dir, "pretrained-tokenizer")
+    try:
+        model = BertForSequenceClassification.from_pretrained(model_path)
+        tokenizer = BertTokenizerFast.from_pretrained(tokenizer_path)
+    except Exception as e:
+        raise RuntimeError(f"Failed to load model or tokenizer: {e}")
+
+    # Define training arguments
+    training_args = TrainingArguments(
+        output_dir=output_dir,   
+        do_train=False,       
+        do_eval=True,            
+        per_device_eval_batch_size=8,
+        no_cuda=False,                
+        dataloader_drop_last=False,    
+    )
+
+    # Initialize the Trainer
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        tokenizer=tokenizer,
+        compute_metrics=compute_metrics,  # Function to compute metrics, to be defined
+    )
+
+
+def compute_metrics(eval_pred):
+    # load metrics
+    accuracy_metric = load_metric("accuracy")
+    precision_metric = load_metric("precision")
+    recall_metric = load_metric("recall")
+    f1_metric = load_metric("f1")
+    
+    logits, labels = eval_pred
+    predictions = logits.argmax(-1)
+    
+    # compute individual metrics
+    accuracy = accuracy_metric.compute(predictions=predictions, references=labels)
+    precision = precision_metric.compute(predictions=predictions, references=labels, average="macro")
+    recall = recall_metric.compute(predictions=predictions, references=labels, average="macro")
+    f1 = f1_metric.compute(predictions=predictions, references=labels, average="macro")
+    
+    # return all metrics
+    return {
+        "accuracy": accuracy["accuracy"],
+        "precision": precision["precision"],
+        "recall": recall["recall"],
+        "f1": f1["f1"]
+    }
+
+
