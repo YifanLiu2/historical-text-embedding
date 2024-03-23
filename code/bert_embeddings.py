@@ -7,19 +7,22 @@ from datasets import Dataset
 from utils import *
 
 
-def train(model, model_path, data_collator, dataset, epochs):
+def train(model, output_path, data_collator, dataset, epochs):
     """
     Trains the BERT model using the provided DataLoader, learning rate, number of epochs, and device.
     :param mode;: The BERT model to train.
-    :param model_path: Path to the BERT model to train.
+    :param model_path: Path to save the BERT model
     :param data_collator: An instance of a data collator that prepares batches of data during training.
     :param dataset: The dataset to be used for training, an insance of datasets.Dataset.
     :param epochs: Number of training epochs.
     """
+    # create output dir
+    os.makedirs(output_path, exist_ok=True)
+
     # define training arguments
     training_args = TrainingArguments(
         overwrite_output_dir = True,
-        output_dir=model_path,
+        output_dir=output_path,
         num_train_epochs=epochs, # 4 for fine-tune; 10 for pretrain
         per_device_train_batch_size=8,
         gradient_accumulation_steps=8,
@@ -39,7 +42,7 @@ def train(model, model_path, data_collator, dataset, epochs):
 
     # train and save model
     trainer.train()
-    trainer.save_model(model_path)
+    trainer.save_model(output_path)
 
 
 def train_BERT(model_name, input_file, output_dir, is_pretraining):
@@ -84,9 +87,10 @@ def train_BERT(model_name, input_file, output_dir, is_pretraining):
             num_attention_heads=12,
             max_position_embeddings=512,
         )
+        print("pre-train BERT model...")
         model = BertForMaskedLM(config=config)
         model_path = os.path.join(output_dir, "pretrained-bert")
-        train(model, model_path=model_path, data_collator=data_collator, dataset=dataset, epochs=10)
+        train(model, output_path=model_path, data_collator=data_collator, dataset=dataset, epochs=10)
 
     else:
         # fine-tune BERT model
@@ -94,6 +98,13 @@ def train_BERT(model_name, input_file, output_dir, is_pretraining):
             model = BertForMaskedLM.from_pretrained(model_name)
         except Exception as e:
             raise RuntimeError(f"Failed to load model: {e}")
-        model_path = os.path.join(output_dir, model_name)
-        train(model, model_path=model_path, data_collator=data_collator, dataset=dataset, epochs=4)
+        print(f"fine-tuned BERT model: {model_name}...")
+        
+        # adjust tokenizer size for model fine-tune
+        model.resize_token_embeddings(len(tokenizer))
+
+        # define the output path to save model
+        format_model_name = model_name.replace("/", "-")
+        model_path = os.path.join(output_dir, f"fine-tuned-bert-{format_model_name}")
+        train(model, output_path=model_path, data_collator=data_collator, dataset=dataset, epochs=4)
 
