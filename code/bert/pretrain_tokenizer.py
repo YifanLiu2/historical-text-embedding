@@ -1,15 +1,13 @@
-import os
-import json
+import os, json
 from tokenizers import BertWordPieceTokenizer
-from utils import *
+from ..utils import *
 
 def train_tokenizer(input_file, output_dir):
     """
     Trains a BertWordPieceTokenizer on a given corpus and saves the tokenizer model along with its configuration.
 
-    Parameters:
-    - input_file: Path to the text file or files containing the training corpus. Can be a single string (path to a file) or a list of strings (paths to multiple files).
-    - output_dir: Directory where the trained tokenizer model and its configuration will be saved. If the directory does not exist, it will be created.
+    param input_file: Path to the text file or files containing the training corpus. Can be a single string (path to a file) or a list of strings (paths to multiple files).
+    param output_dir: Directory where the trained tokenizer model and its configuration will be saved. If the directory does not exist, it will be created.
     """
     special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "<S>", "<T>"]
     vocab_size = 32000
