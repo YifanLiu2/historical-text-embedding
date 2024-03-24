@@ -119,6 +119,13 @@ def sentence_to_bert_embeddings(sentence, model, tokenizer):
     input_ids = inputs["input_ids"]
     attention_mask = inputs['attention_mask']
 
+    # manually pad sequence length to 512
+    pad_length = 512 - input_ids.size(1)
+    pad_token_id = tokenizer.pad_token_id
+    pad_token_tensor = torch.full((1, pad_length), pad_token_id, dtype=torch.long, device=input_ids.device)
+    input_ids = torch.cat([input_ids, pad_token_tensor], dim=1) if pad_length > 0 else input_ids
+    attention_mask = torch.cat([attention_mask, torch.zeros((1, pad_length), dtype=torch.long)], dim=1) if pad_length > 0 else attention_mask
+
     # get embeddings from the second-to-last layer
     with torch.no_grad():
         outputs = model(input_ids, attention_mask=attention_mask, output_hidden_states=True)
