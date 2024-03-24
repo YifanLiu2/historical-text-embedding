@@ -1,3 +1,5 @@
+import os
+
 def read_corpus(file_path):
     """
     Generator that yields sentences from a corpus file, splitting by lines and then by spaces.
@@ -37,3 +39,17 @@ def chunk_text(text, tokenizer, max_length=512):
         chunks.append(" ".join(chunk))
 
     return chunks
+
+
+def get_absolute_file_paths(folder_path):
+    """
+    Generates a list of absolute file paths within a specified directory.
+
+    :param folder_path: The path to the directory from which to list file paths.
+    :return: A list containing the absolute paths of all files within the given directory.
+    """
+    return [
+        os.path.join(folder_path, file)
+        for file in os.listdir(folder_path)
+        if os.path.isfile(os.path.join(folder_path, file))
+    ]

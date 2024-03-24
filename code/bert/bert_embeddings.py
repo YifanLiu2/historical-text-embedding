@@ -2,7 +2,7 @@ import os
 from transformers import BertConfig, BertForMaskedLM, BertTokenizerFast, DataCollatorForLanguageModeling, Trainer, TrainingArguments
 from datasets import Dataset
 
-from utils import *
+from ..utils import *
 
 
 def train(model, output_path, data_collator, dataset, epochs):
