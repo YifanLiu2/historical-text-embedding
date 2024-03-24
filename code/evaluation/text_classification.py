@@ -1,19 +1,25 @@
-from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_score
+import os, random, argparse
+from tqdm import tqdm
+
 import numpy as np
 import pandas as pd
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, TensorDataset
-from torch.nn.utils.rnn import pad_sequence
-import os
-from tqdm import tqdm
+from torch.utils.data import DataLoader, Dataset, Subset
+from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_score
+from sklearn.model_selection import KFold
 from gensim.models import FastText
 from transformers import BertTokenizer, BertModel
-import argparse
-from torch.utils.data import Dataset
-from sklearn.model_selection import KFold
-from torch.utils.data import Subset
+
+# set random number
+seed_value = 42  
+random.seed(seed_value)
+np.random.seed(seed_value)
+torch.manual_seed(seed_value)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed_value) 
 
 
 def read_file(file_path):
@@ -23,29 +29,24 @@ def read_file(file_path):
 
 
 def read_labels(file_path):
-    """Reads labels from a file."""
+    """Read and preprocess labels from a file.
+
+    :param file_path: Path to the label file.
+    :return: Preprocessed list of labels.
+    """
     with open(file_path, "r", encoding="utf-8") as file:
         labels = pd.Series([label for line in file for label in line.strip().split()])
         labels = labels.replace('NA', pd.NA)
         labels = labels.astype('category').cat.codes
     return labels.tolist()
 
-def create_dataset(embeddings, labels, nan_value=-1):
-    """
-    Filters out data points with NaN labels and creates a TensorDataset with the remaining data.
-    """
-    valid_idx = [i for i, label in enumerate(labels) if label != nan_value]
-
-    # Use valid indices to filter embeddings and labels
-    embeddings = embeddings[valid_idx]
-    labels = labels[valid_idx]
-
-    return TensorDataset(embeddings, labels)
-    
 
 def k_fold_split(dataset, k=5):
-    """
-    randomly split a PyTorch tensor dataset into k folds.
+    """Split dataset into k folds for cross-validation.
+
+    :param dataset: The dataset to split.
+    :param k: Number of folds, defaults to 5.
+    :return: List of tuples containing train and validation datasets for each fold.
     """
     indices = torch.randperm(len(dataset)).tolist()
     
@@ -63,7 +64,9 @@ def k_fold_split(dataset, k=5):
     
     return folds
 
+
 class TextDataset(Dataset):
+    """ PyTorch Dataset for text data."""
     def __init__(self, corpus, labels, model, tokenizer=None, is_bert=False, nan_value=-1):
         self.corpus = corpus
         self.labels = labels
@@ -93,10 +96,15 @@ class TextDataset(Dataset):
         return embedding, label
 
 
-
-###### Extract Features for Static Word Embeddings ######
+###### Extract Features for Word Embeddings ######
 def sentence_to_embedding(sentence, embeddings, max_seq_length):
-    """Converts a sentence to an embedding."""
+    """Generate embeddings for a sentence using a specified FastText model.
+
+    :param sentence: Sentence to embed.
+    :param embeddings: Trained FastText model.
+    :param max_seq_length: Maximum length of the sentence for padding/truncation.
+    :return: Embeddings for the sentence.
+    """
 
     embed_dim = embeddings.vector_size
     words = sentence.split()
@@ -114,6 +122,13 @@ def sentence_to_embedding(sentence, embeddings, max_seq_length):
 
 ###### Extract Features for BERT ######
 def sentence_to_bert_embeddings(sentence, model, tokenizer):
+    """Generate BERT embeddings for a given sentence.
+
+    :param sentence: Sentence to embed.
+    :param model: Pretrained BERT model.
+    :param tokenizer: BERT tokenizer.
+    :return: BERT embeddings for the sentence.
+    """
     # tokenize inputs
     inputs = tokenizer(sentence, padding=True, truncation=True, max_length=512, return_tensors="pt")
     input_ids = inputs["input_ids"]
@@ -137,10 +152,11 @@ def sentence_to_bert_embeddings(sentence, model, tokenizer):
 
 
 class SequenceClassifier(nn.Module):
+    """LSTM-based sequence classifier."""
     def __init__(self, embed_dim, hidden_dim, num_classes):
         super(SequenceClassifier, self).__init__()
         
-        self.lstm = nn.LSTM(embed_dim, hidden_dim, batch_first=True, bidirectional=True, dropout=0.3)
+        self.lstm = nn.LSTM(embed_dim, hidden_dim, batch_first=True, bidirectional=True)
         self.dropout = nn.Dropout(0.3)
         lstm_output_dim = hidden_dim * 2
         self.fc = nn.Linear(lstm_output_dim, num_classes)
@@ -156,7 +172,15 @@ class SequenceClassifier(nn.Module):
 
 
 def train(model, dataset, batch_size, epoch_num, learning_rate, device):
-    """Train"""
+    """Train a model on a given dataset.
+
+    :param model: Model to train.
+    :param dataset: Dataset for training.
+    :param batch_size: Batch size for training.
+    :param epoch_num: Number of epochs for training.
+    :param learning_rate: Learning rate for the optimizer.
+    :param device: Device to train on ('cuda' or 'cpu').
+    """
     model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -185,7 +209,14 @@ def train(model, dataset, batch_size, epoch_num, learning_rate, device):
 
 
 def evaluate(model, dataset, batch_size, device):
-    """Evaluates model performance. """
+    """Evaluate a model on a given dataset.
+
+    :param model: Model to evaluate.
+    :param dataset: Dataset for evaluation.
+    :param batch_size: Batch size for evaluation.
+    :param device: Device for evaluation ('cuda' or 'cpu').
+    :return: Evaluation metrics (accuracy, precision, recall, f1).
+    """
     model.eval() 
     model.to(device)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
@@ -214,7 +245,15 @@ def evaluate(model, dataset, batch_size, device):
 
 
 def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, tokenizer_path=None, input_label=None):
-    """Evaluates embeddings and model."""
+    """ Perform evaluation of embeddings and models across multiple metadata labels.
+    :param model_path: Path to the pre-trained model (BERT or FastText).
+    :param is_bert: Flag indicating whether a BERT model is used.
+    :param corpus_path: Path to the text corpus file.
+    :param label_dir: Directory containing label files corresponding to the corpus.
+    :param output_dir: Directory where evaluation results will be saved.
+    :param tokenizer_path: Path to the BERT tokenizer, required if is_bert is True.
+    :param input_label: Specific label file name to use for evaluation, defaults to evaluating all labels in label_dir.
+    """
     # ---- load data and label ----
     if input_label:
         label_paths = [(input_label, os.path.join(label_dir, input_label))]
@@ -278,6 +317,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
                 values_str = ", ".join(f"{v:.4f}" for v in values) 
                 f.write(f"{metric.capitalize()} - Values: [{values_str}], Mean: {np.mean(values):.4f}, Std: {np.std(values):.4f}\n")
             f.write("-" * 50 + "\n")
+            f.flush()
 
 
 def main():
