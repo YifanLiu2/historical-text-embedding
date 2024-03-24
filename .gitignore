@@ -4,8 +4,14 @@ PyWS
 # Data
 data
 
-# Trained Model
-experiments/trained_model/*.bin
+# Experiments
+experiments
+
+models
+
+dataset
+
+inputs
 
 # other outputs
 outputs
