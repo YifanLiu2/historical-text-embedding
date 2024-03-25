@@ -287,6 +287,8 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
     output_path = os.path.join(output_dir, "extrinsic_eval.txt")
 
     with open(output_path, "a") as f:
+        f.write(f"Evaluation for model: {model_path}\n")
+        f.flush()
         for file_name, label_path in label_paths:
             try:
                 labels = torch.tensor(read_labels(label_path), dtype=torch.long)
@@ -304,7 +306,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
                 train_dataset = Subset(dataset, train_idx)
                 val_dataset = Subset(dataset, val_idx)
                 classifier = SequenceClassifier(embed_dim, 256, num_classes).to(device)
-                train(classifier, train_dataset, 8, 5, 0.001, device)
+                train(classifier, train_dataset, batch_size=64, epoch_num=5, learning_rate=0.001, device=device)
                 acc, prec, recall, f1 = evaluate(classifier, val_dataset, 8, device)
                 metrics['acc'].append(acc)
                 metrics['prec'].append(prec)
@@ -313,6 +315,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
 
             # write evaluation results for each label
             f.write(f"\nResults for {file_name}:\n")
+            f.flush
             for metric, values in metrics.items():
                 values_str = ", ".join(f"{v:.4f}" for v in values) 
                 f.write(f"{metric.capitalize()} - Values: [{values_str}], Mean: {np.mean(values):.4f}, Std: {np.std(values):.4f}\n")
