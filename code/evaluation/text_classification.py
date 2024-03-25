@@ -244,13 +244,13 @@ def evaluate(model, dataset, batch_size, device):
     return accuracy, precision, recall, f1
 
 
-def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, tokenizer_path=None, input_label=None):
+def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_path, tokenizer_path=None, input_label=None):
     """ Perform evaluation of embeddings and models across multiple metadata labels.
     :param model_path: Path to the pre-trained model (BERT or FastText).
     :param is_bert: Flag indicating whether a BERT model is used.
     :param corpus_path: Path to the text corpus file.
     :param label_dir: Directory containing label files corresponding to the corpus.
-    :param output_dir: Directory where evaluation results will be saved.
+    :param outputpath: Path to the output file.
     :param tokenizer_path: Path to the BERT tokenizer, required if is_bert is True.
     :param input_label: Specific label file name to use for evaluation, defaults to evaluating all labels in label_dir.
     """
@@ -284,7 +284,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
 
     # ---- train and evaluate ----
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    output_path = os.path.join(output_dir, "extrinsic_eval.txt")
+    # output_path = os.path.join(output_dir, "extrinsic_eval.txt")
 
     with open(output_path, "a") as f:
         f.write(f"Evaluation for model: {model_path}\n")
@@ -306,7 +306,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_dir, toke
                 train_dataset = Subset(dataset, train_idx)
                 val_dataset = Subset(dataset, val_idx)
                 classifier = SequenceClassifier(embed_dim, 256, num_classes).to(device)
-                train(classifier, train_dataset, batch_size=64, epoch_num=5, learning_rate=0.001, device=device)
+                train(classifier, train_dataset, batch_size=16, epoch_num=5, learning_rate=0.001, device=device)
                 acc, prec, recall, f1 = evaluate(classifier, val_dataset, 8, device)
                 metrics['acc'].append(acc)
                 metrics['prec'].append(prec)
@@ -330,7 +330,7 @@ def main():
     parser.add_argument("-b", "--is_bert", action='store_true', help="Use BERT model.")
     parser.add_argument("-c", "--corpus_path", required=True, help="Path to the corpus file.")
     parser.add_argument("-ld", "--label_dir", required=True, help="Directory containing label files.")
-    parser.add_argument("-o", "--output_dir", required=True, help="Output directory.")
+    parser.add_argument("-o", "--output_path", required=True, help="Output path.")
     parser.add_argument("-t", "--tokenizer_path", help="Tokenizer path (required for BERT).")
     parser.add_argument("-l", "--input_label", help="Specific label file name.")
 
@@ -339,16 +339,13 @@ def main():
     # if use BERT model, one must specify tokenizer path
     if args.is_bert and not args.tokenizer_path:
         parser.error("--is_bert requires --tokenizer_path.")
-    
-    # create output dir if not exist
-    os.makedirs(args.output_dir, exist_ok=True)
 
     main_eval_loop(
         model_path=args.model_path,
         is_bert=args.is_bert,
         corpus_path=args.corpus_path,
         label_dir=args.label_dir,
-        output_dir=args.output_dir,
+        output_path=args.output_path,
         tokenizer_path=args.tokenizer_path,
         input_label=args.input_label
     )
