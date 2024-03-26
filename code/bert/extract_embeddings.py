@@ -137,7 +137,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--tokenizer_dir", type=str, required=True, help="Path to the pretrained tokenizer.")
     parser.add_argument("-m", "--model_dir", type=str, required=True, help="Directory containing pretrained BERT models.")
     parser.add_argument("-c", "--corpus_dir", type=str, required=True, help="Directory containing corpus files.")
-    parser.add_argument("-o", "--ouput_dir", type=str, required=True, help="Directory to save the extracted embeddings.")
+    parser.add_argument("-o", "--output_dir", type=str, required=True, help="Directory to save the extracted embeddings.")
 
     args = parser.parse_args()
 
