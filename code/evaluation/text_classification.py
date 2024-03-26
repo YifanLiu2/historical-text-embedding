@@ -244,7 +244,7 @@ def evaluate(model, dataset, batch_size, device):
     return accuracy, precision, recall, f1
 
 
-def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_path, tokenizer_path=None, input_label=None):
+def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_path, tokenizer_path=None, input_label=None, batch_size=8):
     """ Perform evaluation of embeddings and models across multiple metadata labels.
     :param model_path: Path to the pre-trained model (BERT or FastText).
     :param is_bert: Flag indicating whether a BERT model is used.
@@ -306,7 +306,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_path, tok
                 train_dataset = Subset(dataset, train_idx)
                 val_dataset = Subset(dataset, val_idx)
                 classifier = SequenceClassifier(embed_dim, 256, num_classes).to(device)
-                train(classifier, train_dataset, batch_size=64, epoch_num=5, learning_rate=0.001, device=device)
+                train(classifier, train_dataset, batch_size=batch_size, epoch_num=5, learning_rate=0.001, device=device)
                 acc, prec, recall, f1 = evaluate(classifier, val_dataset, 8, device)
                 metrics['acc'].append(acc)
                 metrics['prec'].append(prec)
@@ -333,6 +333,7 @@ def main():
     parser.add_argument("-o", "--output_path", required=True, help="Output path.")
     parser.add_argument("-t", "--tokenizer_path", help="Tokenizer path (required for BERT).")
     parser.add_argument("-l", "--input_label", help="Specific label file name.")
+    parser.add_argument("--batch", type=int, default=8, help="Batch size in training")
 
     args = parser.parse_args()
 
@@ -347,7 +348,8 @@ def main():
         label_dir=args.label_dir,
         output_path=args.output_path,
         tokenizer_path=args.tokenizer_path,
-        input_label=args.input_label
+        input_label=args.input_label,
+        batch_size=args.batch
     )
 
 if __name__ == "__main__":
