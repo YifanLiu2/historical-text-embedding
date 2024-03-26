@@ -104,6 +104,7 @@ def get_word_embeddings(corpus_dir, output_dir, model_dir, tokenizer_dir):
         device = torch.device("cpu")
     
     # load tokenizer
+    print("loading tokenizer...")
     tokenizer = BertTokenizerFast.from_pretrained(tokenizer_dir)
     
     # load corpora and models
@@ -122,6 +123,7 @@ def get_word_embeddings(corpus_dir, output_dir, model_dir, tokenizer_dir):
             model = model.to(device)
             model.eval()
             # get word embeddings
+            print(f"processing inputs from {corpus_name} using {model_name} ...")
             word_embeddings_avg = seq_to_token_embeddings(
                 tokenizer=tokenizer, model=model, corpus=corpus, device=device
             )
