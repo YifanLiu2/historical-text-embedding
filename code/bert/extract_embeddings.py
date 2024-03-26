@@ -111,7 +111,7 @@ def get_word_embeddings(corpus_dir, output_dir, model_dir, tokenizer_dir):
     model_path_lst = get_absolute_file_paths(model_dir)
     for corpus_path in corpus_path_lst:
         corpus = list(read_corpus(corpus_path))
-        corpus = chunk_text(corpus, tokenizer)
+        corpus = [chunk for doc in corpus for chunk in chunk_text(doc, tokenizer)]
         corpus_name = os.path.basename(corpus_path).split(".")[0]
         prefix = corpus_name_reference[corpus_name]
         for model_path in model_path_lst:
