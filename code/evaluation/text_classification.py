@@ -315,7 +315,7 @@ def main_eval_loop(model_path, is_bert, corpus_path, label_dir, output_path, tok
 
             # write evaluation results for each label
             f.write(f"\nResults for {file_name}:\n")
-            f.flush
+            f.flush()
             for metric, values in metrics.items():
                 values_str = ", ".join(f"{v:.4f}" for v in values) 
                 f.write(f"{metric.capitalize()} - Values: [{values_str}], Mean: {np.mean(values):.4f}, Std: {np.std(values):.4f}\n")
